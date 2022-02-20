@@ -70,9 +70,9 @@ def Prepare_Link_Dictionary(bodyID):
 
         jointInfo = p.getJointInfo( bodyID , jointIndex )
 
-        jointName = jointInfo[1]
+        jointName = jointInfo[1].decode('UTF-8')
 
-        jointName = jointName.decode("utf-8")
+        jointName = jointName
 
         jointName = jointName.split("_")
 
@@ -96,7 +96,7 @@ def Prepare_Joint_Dictionary(bodyID):
 
         jointInfo = p.getJointInfo( bodyID , jointIndex )
 
-        jointName = jointInfo[1]
+        jointName = jointInfo[1].decode("utf-8")
 
         jointNamesToIndices[jointName] = jointIndex
 
