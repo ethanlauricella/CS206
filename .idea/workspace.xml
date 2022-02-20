@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Simulated Sensors">
+    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Created Motor bots, added movement">
+      <change afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sensor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/world.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyze.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyrosim/pyrosim.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyrosim/pyrosim.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sensors" />
+        <entry key="$PROJECT_DIR$" value="motors" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,9 +41,9 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pyrosim/pyrosim.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/simulate.py" />
   </component>
-  <component name="RunManager" selected="Python.simulation">
+  <component name="RunManager" selected="Python.simulate">
     <configuration name="Analyze" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,19 +86,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pyrosim" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="simulate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyrosim" />
+      <option name="SDK_HOME" value="C:\Users\Ethan\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyrosim/pyrosim.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/simulate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -129,11 +132,11 @@
       <item itemvalue="Python.generate" />
       <item itemvalue="Python.simulation" />
       <item itemvalue="Python.Analyze" />
-      <item itemvalue="Python.pyrosim" />
+      <item itemvalue="Python.simulate" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.pyrosim" />
+        <item itemvalue="Python.simulate" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644777081647</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Created Motor bots, added movement">
+      <created>1644781521380</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1644781521380</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +272,7 @@
     <MESSAGE value="Multiple Towers, mutiple links" />
     <MESSAGE value="Created Joints, 3 cubes" />
     <MESSAGE value="Simulated Sensors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Simulated Sensors" />
+    <MESSAGE value="Created Motor bots, added movement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Motor bots, added movement" />
   </component>
 </project>
