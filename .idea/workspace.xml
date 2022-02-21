@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Created Motor bots, added movement">
-      <change afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sensor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/world.py" afterDir="false" />
+    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Multiple projects done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/sensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulate.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +30,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="23tTg3Y3IlqdcVizFt3xEQp2BFn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -233,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644781521380</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Multiple projects done">
+      <created>1645392075635</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1645392075635</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,6 +288,7 @@
     <MESSAGE value="Created Joints, 3 cubes" />
     <MESSAGE value="Simulated Sensors" />
     <MESSAGE value="Created Motor bots, added movement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Motor bots, added movement" />
+    <MESSAGE value="Multiple projects done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiple projects done" />
   </component>
 </project>

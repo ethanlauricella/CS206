@@ -2,11 +2,11 @@
 import numpy as numpy
 import matplotlib.pyplot as plt
 
-backLegSensorValues = numpy.load("data/backLegSensorValues.npy")
-frontLegSensorValues = numpy.load("data/frontLegSensorValues.npy")
+backLegSensorValues = numpy.load("data/BackLegSensor.npy")
+frontLegSensorValues = numpy.load("data/FrontLegSensor.npy")
 
-backLegJointValues = numpy.load("data/backLegJointValues.npy")
-frontLegJointValues = numpy.load("data/frontLegJointValues.npy")
+backLegJointValues = numpy.load("data/BackLegJoint.npy")
+frontLegJointValues = numpy.load("data/FrontLegJoint.npy")
 
 #plt.plot(backLegSensorValues, linewidth=4, label='BackLeg')
 #plt.plot(frontLegSensorValues, linewidth=2, label='FrontLeg')
