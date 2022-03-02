@@ -1,8 +1,53 @@
 import pybullet as p
+import pyrosim.pyrosim as pyrosim
+from pyrosim.neuralNetwork import NEURAL_NETWORK
+
+from sensor import SENSOR
+from motor import MOTOR
+
 
 class ROBOT:
     def __init__(self):
         self.sensors = {}
         self.motors = {}
-        robotId = p.loadURDF("body.urdf")
-        pass
+        self.robotId = p.loadURDF("body.urdf")
+        pyrosim.Prepare_To_Simulate(self.robotId)
+        ROBOT.Prepare_To_Sense(self)
+        ROBOT.Prepare_To_Act(self)
+        self.nn = NEURAL_NETWORK("brain.nndf")
+
+    def Prepare_To_Sense(self):
+        for linkName in pyrosim.linkNamesToIndices:
+            self.sensors[linkName] = SENSOR(linkName)
+
+    def Sense(self, i):
+        for j in self.sensors:
+            self.sensors[j].Get_Value(i)
+
+    def Prepare_To_Act(self):
+        for jointName in pyrosim.jointNamesToIndices:
+            self.motors[jointName] = MOTOR(jointName)
+
+    def Act(self):
+        for self.neuronName in self.nn.Get_Neuron_Names():
+            if self.nn.Is_Motor_Neuron(self.neuronName):
+                self.jointName = self.nn.Get_Motor_Neurons_Joint(self.neuronName)
+                self.desiredAngle = self.nn.Get_Value_Of(self.neuronName)
+                for j in self.motors:
+                    self.motors[j].Set_Value(self.desiredAngle, self.robotId)
+                print(self.neuronName, self.jointName, self.desiredAngle)
+
+                #for j in self.motors:
+                 #   self.motors[j].Set_Value(i,self.robotId)
+
+    def Save_Sensor(self):
+        for j in self.sensors:
+            self.sensors[j].Save_Values()
+
+    def Save_Motor(self):
+        for j in self.motors:
+            self.motors[j].Save_Values()
+
+    def Think(self):
+        self.nn.Update()
+        self.nn.Print()
