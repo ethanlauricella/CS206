@@ -25,22 +25,14 @@ class SIMULATION:
 
             p.stepSimulation()
             self.robot.Sense(i)
-            self.robot.Prepare_To_Act()
             self.robot.Act(i)
-            '''
 
-            self.backLegJointValues[i] = backLegPosition
-            self.frontLegJointValues[i] = frontLegPosition
-
-            '''
             #t.sleep(1. / 480.)
             t.sleep(1./60.)
     def Save_Sensor(self):
         self.robot.Save_Sensor()
     def Save_Motor(self):
         self.robot.Save_Motor()
-
-
 
     def __del__(self):
         p.disconnect()

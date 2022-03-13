@@ -15,7 +15,6 @@ class MOTOR:
         self.motorValues = motorValues
 
 
-
         self.amplitude = eval("c.amplitude" + jointName)
         self.frequency = eval("c.frequency" + jointName)
         self.offset = eval("c.offset" + jointName)

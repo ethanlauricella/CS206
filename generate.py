@@ -32,6 +32,13 @@ def Create_Robot():
 
     pyrosim.End()
 
+def Generate_Brain():
+    pyrosim.Start_NNDF("brain.nndf")
+
+    pyrosim.Send_Synapse(sourceNeuronName=0, targetNeuronName=3, weight=1.0)
+
+    pyrosim.End()
+
 
 Create_world()
 Create_Robot()
