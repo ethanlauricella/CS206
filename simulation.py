@@ -21,14 +21,27 @@ class SIMULATION:
         self.robot = ROBOT()
 
     def Run(self):
+        self.robot.Prepare_To_Act()
         for i in range(1000):
 
             p.stepSimulation()
             self.robot.Sense(i)
+
             self.robot.Act(i)
 
             #t.sleep(1. / 480.)
             t.sleep(1./60.)
+=======
+            self.robot.Think()
+            self.robot.Act()
+            '''
+
+            self.backLegJointValues[i] = backLegPosition
+            self.frontLegJointValues[i] = frontLegPosition
+
+            '''
+            t.sleep(1. / 480.)
+
     def Save_Sensor(self):
         self.robot.Save_Sensor()
     def Save_Motor(self):
