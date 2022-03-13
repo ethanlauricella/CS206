@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Multiple projects done">
+    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Finished OOP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/pyrosim/neuralNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyrosim/neuralNetwork.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyrosim/neuron.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyrosim/neuron.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
@@ -149,6 +150,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.simulate" />
+        <item itemvalue="Python.simulate" />
+        <item itemvalue="Python.simulate" />
+        <item itemvalue="Python.simulate" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645392075635</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Finished OOP">
+      <created>1645476158314</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1645476158314</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +311,8 @@
     <MESSAGE value="Simulated Sensors" />
     <MESSAGE value="Created Motor bots, added movement" />
     <MESSAGE value="Multiple projects done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Multiple projects done" />
+    <MESSAGE value="Finished OOP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished OOP" />
   </component>
   <component name="WindowStateProjectService">
     <state x="89" y="0" width="838" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1646075792752">

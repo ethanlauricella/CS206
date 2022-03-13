@@ -42,6 +42,13 @@ def Generate_brain():
     pyrosim.Send_Motor_Neuron(name=4, jointName="Torso_FrontLeg")
     pyrosim.End()
 
+def Generate_Brain():
+    pyrosim.Start_NNDF("brain.nndf")
+
+    pyrosim.Send_Synapse(sourceNeuronName=0, targetNeuronName=3, weight=1.0)
+
+    pyrosim.End()
+
 
 Create_world()
 Generate_body()

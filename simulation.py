@@ -26,6 +26,12 @@ class SIMULATION:
 
             p.stepSimulation()
             self.robot.Sense(i)
+
+            self.robot.Act(i)
+
+            #t.sleep(1. / 480.)
+            t.sleep(1./60.)
+=======
             self.robot.Think()
             self.robot.Act()
             '''
@@ -40,8 +46,6 @@ class SIMULATION:
         self.robot.Save_Sensor()
     def Save_Motor(self):
         self.robot.Save_Motor()
-
-
 
     def __del__(self):
         p.disconnect()
