@@ -1,0 +1,19 @@
+Index: robot.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pybullet as p\r\nimport pyrosim.pyrosim as pyrosim\r\nfrom pyrosim.neuralNetwork import NEURAL_NETWORK\r\n\r\nfrom sensor import SENSOR\r\nfrom motor import MOTOR\r\n\r\n\r\nclass ROBOT:\r\n    def __init__(self):\r\n        self.sensors = {}\r\n        self.motors = {}\r\n        self.robotId = p.loadURDF(\"body.urdf\")\r\n        pyrosim.Prepare_To_Simulate(self.robotId)\r\n        ROBOT.Prepare_To_Sense(self)\r\n        ROBOT.Prepare_To_Act(self)\r\n        self.nn = NEURAL_NETWORK(\"brain.nndf\")\r\n\r\n    def Prepare_To_Sense(self):\r\n        for linkName in pyrosim.linkNamesToIndices:\r\n            self.sensors[linkName] = SENSOR(linkName)\r\n\r\n    def Sense(self, i):\r\n        for j in self.sensors:\r\n            self.sensors[j].Get_Value(i)\r\n\r\n    def Prepare_To_Act(self):\r\n        for jointName in pyrosim.jointNamesToIndices:\r\n            self.motors[jointName] = MOTOR(jointName)\r\n\r\n    def Act(self):\r\n        for self.neuronName in self.nn.Get_Neuron_Names():\r\n            if self.nn.Is_Motor_Neuron(self.neuronName):\r\n                self.jointName = self.nn.Get_Motor_Neurons_Joint(self.neuronName)\r\n                self.desiredAngle = self.nn.Get_Value_Of(self.neuronName)\r\n                for j in self.motors:\r\n                    self.motors[j].Set_Value(self.desiredAngle, self.robotId)\r\n                print(self.neuronName, self.jointName, self.desiredAngle)\r\n\r\n                #for j in self.motors:\r\n                 #   self.motors[j].Set_Value(i,self.robotId)\r\n\r\n    def Save_Sensor(self):\r\n        for j in self.sensors:\r\n            self.sensors[j].Save_Values()\r\n\r\n    def Save_Motor(self):\r\n        for j in self.motors:\r\n            self.motors[j].Save_Values()\r\n\r\n    def Think(self):\r\n        self.nn.Update()\r\n        self.nn.Print()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/robot.py b/robot.py
+--- a/robot.py	
++++ b/robot.py	
+@@ -35,7 +35,7 @@
+                 self.desiredAngle = self.nn.Get_Value_Of(self.neuronName)
+                 for j in self.motors:
+                     self.motors[j].Set_Value(self.desiredAngle, self.robotId)
+-                print(self.neuronName, self.jointName, self.desiredAngle)
++                #print(self.neuronName, self.jointName, self.desiredAngle)
+ 
+                 #for j in self.motors:
+                  #   self.motors[j].Set_Value(i,self.robotId)
