@@ -135,10 +135,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.generate" />
-      <item itemvalue="Python.simulation" />
       <item itemvalue="Python.Analyze" />
+      <item itemvalue="Python.generate" />
       <item itemvalue="Python.simulate" />
+      <item itemvalue="Python.simulation" />
     </list>
     <recent_temporary>
       <list>
