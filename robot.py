@@ -29,15 +29,14 @@ class ROBOT:
             self.motors[jointName] = MOTOR(jointName)
 
     def Act(self):
-        for self.neuronName in self.nn.Get_Neuron_Names():
-            if self.nn.Is_Motor_Neuron(self.neuronName):
-                self.jointName = self.nn.Get_Motor_Neurons_Joint(self.neuronName)
-                self.desiredAngle = self.nn.Get_Value_Of(self.neuronName)
-                for j in self.motors:
-                    self.motors[j].Set_Value(self.desiredAngle, self.robotId)
+        for neuronName in self.nn.Get_Neuron_Names():
+            if self.nn.Is_Motor_Neuron(neuronName):
+                self.jointName = self.nn.Get_Motor_Neurons_Joint(neuronName)
+                desiredAngle = self.nn.Get_Value_Of(neuronName)
+                self.motors[self.jointName].Set_Value(desiredAngle, self.robotId)
 
                 #for j in self.motors:
-                 #   self.motors[j].Set_Value(i,self.robotId)
+                #    self.motors[j].Set_Value(i,self.robotId)
 
     def Save_Sensor(self):
         for j in self.sensors:

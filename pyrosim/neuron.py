@@ -62,17 +62,15 @@ class NEURON:
         self.Set_Value(0.0)
         for syn in synapses:
             if syn[1] == self.Get_Name():
-
                 self.Allow_Presynaptic_Neuron_To_Influence_Me(
                     synapses[syn].Get_Weight(),
                     neurons[syn[0]].Get_Value())
-        self.Threshold()
-        print(self.Get_Value())
-
+            self.Threshold()
+        #print(self.Get_Name())
+        #print(self.Get_Value())
 
     def Allow_Presynaptic_Neuron_To_Influence_Me(self, syn, neur):
-
-        val = syn * neur
+        val = (syn * neur) + syn
         self.Add_To_Value(val)
 
     def Print(self):
@@ -86,7 +84,6 @@ class NEURON:
         # print("")
 
     def Set_Value(self, value):
-
         self.value = value
 
     # -------------------------- Private methods -------------------------

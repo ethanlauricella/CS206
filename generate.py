@@ -24,7 +24,7 @@ def Generate_body():
     height = 1
 
     pyrosim.Send_Cube(name="FrontLeg", pos=[0.5, 0.5, .5], size=[length, width, height])
-    pyrosim.Send_Joint(name="FrontLeg_Torso", parent="FrontLeg", child="Torso", type="revolute", position=[1.0, 0.5, 1.0])
+    pyrosim.Send_Joint(name="Torso_FrontLeg", parent="FrontLeg", child="Torso", type="revolute", position=[1.0, 0.5, 1.0])
     pyrosim.Send_Cube(name="Torso", pos=[0.5, 0.0, 0.5], size=[length, width, height])
 
     pyrosim.Send_Cube(name="BackLeg", pos=[0.5, 0.0, -0.5], size=[length, width, height])
@@ -41,8 +41,11 @@ def Generate_brain():
     pyrosim.Send_Motor_Neuron(name=3, jointName="Torso_BackLeg")
     pyrosim.Send_Motor_Neuron(name=4, jointName="Torso_FrontLeg")
 
-    pyrosim.Send_Synapse(sourceNeuronName=0, targetNeuronName=3, weight=1.0)
+    pyrosim.Send_Synapse(sourceNeuronName=0, targetNeuronName=3, weight=-1.0)
     pyrosim.Send_Synapse(sourceNeuronName=1, targetNeuronName=3, weight=1.0)
+
+    pyrosim.Send_Synapse(sourceNeuronName=0, targetNeuronName=4, weight=5.0)
+    pyrosim.Send_Synapse(sourceNeuronName=2, targetNeuronName=4, weight=5.0)
 
     pyrosim.End()
 

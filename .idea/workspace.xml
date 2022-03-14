@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Multiple projects done">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_12_15_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_12_15_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_12_32_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_12_32_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_4_11_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_4_11_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_4_11_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_4_11_PM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_2022_12_26_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_2022_12_26_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_2022_12_30_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_2022_12_30_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/body.urdf" beforeDir="false" afterPath="$PROJECT_DIR$/body.urdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brain.nndf" beforeDir="false" afterPath="$PROJECT_DIR$/brain.nndf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BackLegSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/BackLegSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/FrontLegSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/FrontLegSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TorsoSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/TorsoSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Torso_BackLegMotor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/Torso_BackLegMotor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyrosim/neuron.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyrosim/neuron.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +108,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="simulate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="simulate" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -145,7 +160,6 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.simulate" />
         <item itemvalue="Python.simulate" />
         <item itemvalue="Python.simulate" />
         <item itemvalue="Python.simulate" />
