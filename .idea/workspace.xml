@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="RandomSearch">
-      <change afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
+    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Hillclimber initiating">
+      <change afterPath="$PROJECT_DIR$/hillclimber.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brain.nndf" beforeDir="false" afterPath="$PROJECT_DIR$/brain.nndf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/BackLegSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/BackLegSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/TorsoSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/TorsoSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulate.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="synapses" />
+        <entry key="$PROJECT_DIR$" value="randomsearch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,6 +57,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/search.py" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ethan\Documents\GitHub\CS206" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.Search">
     <configuration name="Analyze" type="PythonConfigurationType" factoryName="Python">
@@ -272,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647219773956</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Hillclimber initiating">
+      <created>1647292060067</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1647292060067</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +336,7 @@
     <MESSAGE value="Multiple projects done" />
     <MESSAGE value="Synapses Done" />
     <MESSAGE value="RandomSearch" />
-    <option name="LAST_COMMIT_MESSAGE" value="RandomSearch" />
+    <MESSAGE value="Hillclimber initiating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hillclimber initiating" />
   </component>
 </project>

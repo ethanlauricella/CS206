@@ -8,6 +8,8 @@ amplitudeTorso_FrontLeg = -math.pi/4.0
 frequencyTorso_FrontLeg = 1/20.0
 offsetTorso_FrontLeg = 0
 
+numberOfGenerations = 10
+
 
 # Generate.py, in Generate_Brain()
 sensors = [0,1,2]

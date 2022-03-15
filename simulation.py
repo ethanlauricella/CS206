@@ -12,8 +12,13 @@ from robot import ROBOT
 
 class SIMULATION:
     # Constructor
-    def __init__(self):
-        self.physicsClient = p.connect(p.GUI)
+    def __init__(self, directOrGUI):
+
+        if directOrGUI == "DIRECT":
+            self.physicsClient = p.connect(p.DIRECT)
+        else:
+            self.physicsClient = p.connect(p.GUI)
+
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         p.setGravity(0, 0, -98)
 
@@ -40,6 +45,9 @@ class SIMULATION:
         self.robot.Save_Sensor()
     def Save_Motor(self):
         self.robot.Save_Motor()
+
+    def Get_Fitness(self):
+        self.robot.Get_Fitness()
 
 
 

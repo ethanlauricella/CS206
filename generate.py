@@ -3,8 +3,6 @@ import random as random
 
 
 
-
-
 def Create_world():
     pyrosim.Start_SDF("world.sdf")
     length = 1.0
@@ -18,7 +16,6 @@ def Create_world():
     #pyrosim.Send_Cube(name="Box", pos=[x, y, z], size=[length, width, height])
 
     pyrosim.End()
-
 
 def Generate_body():
 
