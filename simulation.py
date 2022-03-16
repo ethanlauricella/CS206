@@ -13,7 +13,7 @@ from robot import ROBOT
 class SIMULATION:
     # Constructor
     def __init__(self, directOrGUI):
-
+        self.directOrGUI = directOrGUI
         if directOrGUI == "DIRECT":
             self.physicsClient = p.connect(p.DIRECT)
         else:
@@ -39,7 +39,8 @@ class SIMULATION:
             self.frontLegJointValues[i] = frontLegPosition
 
             '''
-            t.sleep(1. / 480.)
+            if self.directOrGUI == "GUI":
+                t.sleep(1. / 480.)
 
     def Save_Sensor(self):
         self.robot.Save_Sensor()
