@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Hillclimber final">
+    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Hillclimber faster">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brain.nndf" beforeDir="false" afterPath="$PROJECT_DIR$/brain.nndf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/BackLegSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/BackLegSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/TorsoSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/TorsoSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hillclimber.py" beforeDir="false" afterPath="$PROJECT_DIR$/hillclimber.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulate.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/solution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

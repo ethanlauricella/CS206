@@ -23,6 +23,8 @@ class HILL_CLIMBER:
         self.Print()
         self.Select()
 
+
+
     def Spawn(self):
         self.child = copy.deepcopy(self.parent)
 
@@ -32,7 +34,9 @@ class HILL_CLIMBER:
     def Select(self):
 
         if self.parent.fitness > self.child.fitness:
-            self.parent.fitness = self.child.fitness
+            self.parent = self.child
+        if self.child.fitness > self.parent.fitness:
+            pass
 
 
     def Print(self):

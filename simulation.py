@@ -33,12 +33,7 @@ class SIMULATION:
             self.robot.Sense(i)
             self.robot.Think()
             self.robot.Act()
-            '''
 
-            self.backLegJointValues[i] = backLegPosition
-            self.frontLegJointValues[i] = frontLegPosition
-
-            '''
             if self.directOrGUI == "GUI":
                 t.sleep(1. / 480.)
 

@@ -25,7 +25,7 @@ class SOLUTION:
         os.system("C:/Users/Ethan/anaconda3/python.exe simulate.py " + directOrGui)
 
         f = open("fitness.txt", "r")
-        self.fitness = f.readline()
+        self.fitness = float(f.readline())
         f.close()
         pass
 
