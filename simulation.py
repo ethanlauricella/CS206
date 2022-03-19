@@ -1,6 +1,5 @@
 import pybullet as p
 import time as t
-import pybullet_data
 import pyrosim.pyrosim as pyrosim
 import numpy as np
 import math as math
@@ -20,7 +19,6 @@ class SIMULATION:
         else:
             self.physicsClient = p.connect(p.GUI)
 
-        p.setAdditionalSearchPath(pybullet_data.getDataPath())
         p.setGravity(0, 0, -98)
 
         self.world = WORLD()
@@ -40,13 +38,12 @@ class SIMULATION:
 
     def Save_Sensor(self):
         self.robot.Save_Sensor()
+
     def Save_Motor(self):
         self.robot.Save_Motor()
 
     def Get_Fitness(self):
         self.robot.Get_Fitness()
-
-
 
     def __del__(self):
         p.disconnect()

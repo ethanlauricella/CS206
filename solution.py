@@ -8,11 +8,12 @@ import constants as c
 import os
 import random as random
 
+
 class SOLUTION:
 
     def __init__(self, Id):
         self.myID = Id
-        self.weights = np.zeros((3,2))
+        self.weights = np.zeros((3, 2))
         for i in range(3):
             for j in range(2):
                 self.weights[i][j] = np.random.rand() * 2 - 1
@@ -29,24 +30,22 @@ class SOLUTION:
         pass
 
     def Wait_For_Simulation_To_End(self):
-        while not os.path.exists("fitness"+str(self.myID) + ".txt"):
+        while not os.path.exists("fitness" + str(self.myID) + ".txt"):
             t.sleep(0.01)
 
-        f = open("fitness"+str(self.myID) + ".txt", "r")
+        f = open("fitness" + str(self.myID) + ".txt", "r")
         self.fitness = float(f.readline())
         f.close()
-        os.remove("fitness"+str(self.myID) + ".txt")
-
+        t.sleep(1./60.)
+        os.remove("fitness" + str(self.myID) + ".txt")
 
     def Evaluate(self, directOrGui):
         pass
 
-
     def Mutate(self):
-        randomRow = random.randint(0,2)
-        randomColumn = random.randint(0,1)
-        self.weights[randomRow,randomColumn] = random.random() * 2 - 1
-
+        randomRow = random.randint(0, 2)
+        randomColumn = random.randint(0, 1)
+        self.weights[randomRow, randomColumn] = random.random() * 2 - 1
 
     def Create_world(self):
         pyrosim.Start_SDF("World.sdf")
@@ -85,7 +84,7 @@ class SOLUTION:
 
     def Create_brain(self):
 
-        pyrosim.Start_NeuralNetwork("brain"+str(self.myID) + ".nndf")
+        pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
         pyrosim.Send_Sensor_Neuron(name=0, linkName="Torso")
         pyrosim.Send_Sensor_Neuron(name=1, linkName="BackLeg")
         pyrosim.Send_Sensor_Neuron(name=2, linkName="FrontLeg")
@@ -95,7 +94,8 @@ class SOLUTION:
 
         for currentRow in range(3):
             for currentColumn in range(2):
-                pyrosim.Send_Synapse(sourceNeuronName=currentRow, targetNeuronName=currentColumn+3, weight=self.weights[currentRow][currentColumn])
+                pyrosim.Send_Synapse(sourceNeuronName=currentRow, targetNeuronName=currentColumn + 3,
+                                     weight=self.weights[currentRow][currentColumn])
 
         # pyrosim.Send_Synapse(sourceNeuronName=0, targetNeuronName=3, weight=-1.0)
         # pyrosim.Send_Synapse(sourceNeuronName=1, targetNeuronName=3, weight=1.0)
@@ -104,4 +104,3 @@ class SOLUTION:
         # pyrosim.Send_Synapse(sourceNeuronName=2, targetNeuronName=4, weight=5.0)
 
         pyrosim.End()
-

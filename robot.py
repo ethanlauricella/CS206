@@ -16,8 +16,8 @@ class ROBOT:
         pyrosim.Prepare_To_Simulate(self.robotId)
         ROBOT.Prepare_To_Sense(self)
         ROBOT.Prepare_To_Act(self)
-        self.nn = NEURAL_NETWORK("brain"+str(self.solutionID) + ".nndf")
-        os.remove("brain"+str(self.solutionID) + ".nndf")
+        self.nn = NEURAL_NETWORK("brain" + str(self.solutionID) + ".nndf")
+        os.remove("brain" + str(self.solutionID) + ".nndf")
 
     def Prepare_To_Sense(self):
         for linkName in pyrosim.linkNamesToIndices:
@@ -38,7 +38,6 @@ class ROBOT:
                 desiredAngle = self.nn.Get_Value_Of(neuronName)
                 self.motors[self.jointName].Set_Value(desiredAngle, self.robotId)
 
-
     def Save_Sensor(self):
         for j in self.sensors:
             self.sensors[j].Save_Values()
@@ -49,14 +48,14 @@ class ROBOT:
 
     def Think(self):
         self.nn.Update()
-        #self.nn.Print()
+        # self.nn.Print()
 
     def Get_Fitness(self):
         self.stateOfLinkZero = p.getLinkState(self.robotId, 0)
         self.positionOfLinkZero = self.stateOfLinkZero[0]
         self.xCoordinateOfLinkZero = self.positionOfLinkZero[0]
-        f = open("fitness"+str(self.solutionID) + ".txt", "w")
-        f.write(str(self.xCoordinateOfLinkZero) +"\n")
+        f = open("fitness" + str(self.solutionID) + ".txt", "w")
+        f.write(str(self.xCoordinateOfLinkZero) + "\n")
         f.close()
 
         exit()
