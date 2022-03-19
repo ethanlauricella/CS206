@@ -12,7 +12,8 @@ from robot import ROBOT
 
 class SIMULATION:
     # Constructor
-    def __init__(self, directOrGUI):
+    def __init__(self, directOrGUI, solutionID):
+        self.solutionID = solutionID
         self.directOrGUI = directOrGUI
         if directOrGUI == "DIRECT":
             self.physicsClient = p.connect(p.DIRECT)
@@ -23,7 +24,7 @@ class SIMULATION:
         p.setGravity(0, 0, -98)
 
         self.world = WORLD()
-        self.robot = ROBOT()
+        self.robot = ROBOT(self.solutionID)
 
     def Run(self):
         self.robot.Prepare_To_Act()
@@ -35,7 +36,7 @@ class SIMULATION:
             self.robot.Act()
 
             if self.directOrGUI == "GUI":
-                t.sleep(1. / 480.)
+                t.sleep(1. / 60.)
 
     def Save_Sensor(self):
         self.robot.Save_Sensor()

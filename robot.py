@@ -7,14 +7,15 @@ from motor import MOTOR
 
 
 class ROBOT:
-    def __init__(self):
+    def __init__(self, solutionID):
+        self.solutionID = solutionID
         self.sensors = {}
         self.motors = {}
         self.robotId = p.loadURDF("body.urdf")
         pyrosim.Prepare_To_Simulate(self.robotId)
         ROBOT.Prepare_To_Sense(self)
         ROBOT.Prepare_To_Act(self)
-        self.nn = NEURAL_NETWORK("brain.nndf")
+        self.nn = NEURAL_NETWORK("brain"+str(self.solutionID) + ".nndf")
 
     def Prepare_To_Sense(self):
         for linkName in pyrosim.linkNamesToIndices:
@@ -35,8 +36,6 @@ class ROBOT:
                 desiredAngle = self.nn.Get_Value_Of(neuronName)
                 self.motors[self.jointName].Set_Value(desiredAngle, self.robotId)
 
-                #for j in self.motors:
-                #    self.motors[j].Set_Value(i,self.robotId)
 
     def Save_Sensor(self):
         for j in self.sensors:
@@ -54,7 +53,7 @@ class ROBOT:
         self.stateOfLinkZero = p.getLinkState(self.robotId, 0)
         self.positionOfLinkZero = self.stateOfLinkZero[0]
         self.xCoordinateOfLinkZero = self.positionOfLinkZero[0]
-        f = open("fitness.txt", "w")
+        f = open("fitness"+str(self.solutionID) + ".txt", "w")
         f.write(str(self.xCoordinateOfLinkZero) +"\n")
         f.close()
 

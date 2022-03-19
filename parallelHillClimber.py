@@ -7,28 +7,28 @@ import os
 class PARALLEL_HILL_CLIMBER:
 
     def __init__(self):
-
+        pass
         self.nextAvalibleID = 0
         self.parents = {}
-        self.children = {}
+        #self.children = {}
         for bot in range(c.populationSize):
             self.parents[bot] = SOLUTION(self.nextAvalibleID)
             self.nextAvalibleID += 1
-        print(self.parents)
 
 
     def Evolve(self):
         for bot in range(c.populationSize):
             self.parents[bot].Evaluate("GUI")
 
-        for currentGeneration in range(c.numberOfGenerations):
-            self.Evolve_For_One_Generation()
+        #for currentGeneration in range(c.numberOfGenerations):
+        #    self.Evolve_For_One_Generation()
+
 
     def Evolve_For_One_Generation(self):
         self.Spawn()
-        #self.Mutate()
-        #for key in self.children:
-        #    self.children[key].Evaluate("DIRECT")
+        self.Mutate()
+        for key in self.children:
+            self.children[key].Evaluate("DIRECT")
         #self.Print()
         #self.Select()
 
@@ -54,5 +54,6 @@ class PARALLEL_HILL_CLIMBER:
         pass
 
     def Show_Best(self):
-        self.Select()
-        self.parent.Evaluate("GUI")
+        pass
+        #self.Select()
+        #self.parent.Evaluate("GUI")
