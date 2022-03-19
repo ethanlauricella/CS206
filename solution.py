@@ -21,17 +21,26 @@ class SOLUTION:
     def Set_ID(self, Id):
         self.myID = Id
 
-    def Evaluate(self, directOrGui):
+    def Start_Simulation(self, directOrGui):
         self.Create_world()
         self.Create_body()
         self.Create_brain()
-
-        os.system("start /B C:/Users/Ethan/anaconda3/python.exe simulate.py " + directOrGui + " "+str(self.myID))
-
-        #f = open("fitness"+str(self.myID) + ".txt", "r")
-        #self.fitness = float(f.readline())
-        #f.close()
+        os.system("start /B C:/Users/Ethan/anaconda3/python.exe simulate.py " + directOrGui + " " + str(self.myID))
         pass
+
+    def Wait_For_Simulation_To_End(self):
+        while not os.path.exists("fitness"+str(self.myID) + ".txt"):
+            t.sleep(0.01)
+
+        f = open("fitness"+str(self.myID) + ".txt", "r")
+        self.fitness = float(f.readline())
+        f.close()
+        os.remove("fitness"+str(self.myID) + ".txt")
+
+
+    def Evaluate(self, directOrGui):
+        pass
+
 
     def Mutate(self):
         randomRow = random.randint(0,2)
@@ -40,7 +49,7 @@ class SOLUTION:
 
 
     def Create_world(self):
-        pyrosim.Start_SDF("world.sdf")
+        pyrosim.Start_SDF("World.sdf")
         length = 1.0
         width = 1.0
         height = 1.0
@@ -58,7 +67,7 @@ class SOLUTION:
 
     def Create_body(self):
 
-        pyrosim.Start_URDF("body.urdf")
+        pyrosim.Start_URDF("Body.urdf")
 
         length = 1
         width = 1
