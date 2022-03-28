@@ -8,4 +8,4 @@ class WORLD:
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         self.planeId = p.loadURDF("plane.urdf")
         t.sleep(1. / 30.)
-        p.loadSDF("world.sdf")
+        #p.loadSDF("world.sdf")
