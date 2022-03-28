@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Evolution works.">
+    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Final Quad walker.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BackLegSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/BackLegSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TorsoSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/TorsoSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/CLionProjects/Speed-Test-elaurice-ebalasca" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/myMinions" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -365,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648427480898</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Final Quad walker.">
+      <created>1648433323991</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1648433323991</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,6 +426,7 @@
     <MESSAGE value="HillClimber final code" />
     <MESSAGE value="Clean UP" />
     <MESSAGE value="Evolution works." />
-    <option name="LAST_COMMIT_MESSAGE" value="Evolution works." />
+    <MESSAGE value="Final Quad walker." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Quad walker." />
   </component>
 </project>

@@ -58,4 +58,3 @@ class ROBOT:
         f.write(str(self.xCoordinateOfLinkZero) + "\n")
         f.close()
 
-        exit()
