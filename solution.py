@@ -14,8 +14,8 @@ class SOLUTION:
     def __init__(self, Id):
         self.myID = Id
         self.weights = np.zeros((c.numSensorNeurons, c.numMotorNeurons))
-        for i in range(3):
-            for j in range(2):
+        for i in range(c.numSensorNeurons):
+            for j in range(c.numMotorNeurons):
                 self.weights[i][j] = np.random.rand() * 2 - 1
         pass
 
