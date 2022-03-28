@@ -1,4 +1,5 @@
 import math as math
+import numpy as np
 
 amplitudeTorso_BackLeg = math.pi/4.0
 frequencyTorso_BackLeg = 1/10.0
@@ -42,6 +43,6 @@ numSensorNeurons = 9
 numMotorNeurons = 8
 
 # Generate.py, in Generate_Brain()
-sensors = [0,1,2]
-mototors = [3,4]
+sensors = np.arange(numSensorNeurons)
+mototors = np.arange(numSensorNeurons,numMotorNeurons)
 
