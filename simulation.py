@@ -19,7 +19,7 @@ class SIMULATION:
         else:
             self.physicsClient = p.connect(p.GUI)
 
-        p.setGravity(0, 0, -98)
+        p.setGravity(0, 0, -30)
 
         self.world = WORLD()
         self.robot = ROBOT(self.solutionID)
@@ -34,7 +34,7 @@ class SIMULATION:
             self.robot.Act()
 
             if self.directOrGUI == "GUI":
-                t.sleep(1. / 60.)
+                t.sleep(1. / 100.)
 
     def Save_Sensor(self):
         self.robot.Save_Sensor()
