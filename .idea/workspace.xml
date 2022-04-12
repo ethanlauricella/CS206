@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Final Quad walker.">
+    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Updated Code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Body.urdf" beforeDir="false" afterPath="$PROJECT_DIR$/Body.urdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parallelHillClimber.py" beforeDir="false" afterPath="$PROJECT_DIR$/parallelHillClimber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/solution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +219,7 @@
       <workItem from="1646069680690" duration="9541000" />
       <workItem from="1649161757820" duration="320000" />
       <workItem from="1649166783233" duration="1841000" />
-      <workItem from="1649695738607" duration="1506000" />
+      <workItem from="1649695738607" duration="1771000" />
     </task>
     <task id="LOCAL-00001" summary="Starting work on simulation">
       <created>1642552610195</created>
@@ -388,11 +382,35 @@
       <option name="project" value="LOCAL" />
       <updated>1648433323991</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Updated Code">
+      <created>1649730013690</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649730013690</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Updated Code">
+      <created>1649730086494</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1649730086494</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -442,37 +460,54 @@
     <MESSAGE value="Clean UP" />
     <MESSAGE value="Evolution works." />
     <MESSAGE value="Final Quad walker." />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Quad walker." />
+    <MESSAGE value="Updated Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Code" />
   </component>
   <component name="WindowStateProjectService">
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649128733789">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1649128733789" />
+    <state x="293" y="0" key="CommitChangelistDialog2" timestamp="1649730365504">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="293" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1649730365504" />
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1649730242144">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1649730242144" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1649122850447">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1649122850447" />
-    <state width="1237" height="211" key="GridCell.Tab.0.bottom" timestamp="1649261717424">
+    <state width="1237" height="147" key="GridCell.Tab.0.bottom" timestamp="1649730268834">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="211" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1649261717424" />
-    <state width="1237" height="211" key="GridCell.Tab.0.center" timestamp="1649261717424">
+    <state width="1237" height="147" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1649730268834" />
+    <state width="1237" height="147" key="GridCell.Tab.0.center" timestamp="1649730268834">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="211" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1649261717424" />
-    <state width="1237" height="211" key="GridCell.Tab.0.left" timestamp="1649261717424">
+    <state width="1237" height="147" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1649730268834" />
+    <state width="1237" height="147" key="GridCell.Tab.0.left" timestamp="1649730268834">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="211" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1649261717424" />
-    <state width="1237" height="211" key="GridCell.Tab.0.right" timestamp="1649261717424">
+    <state width="1237" height="147" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1649730268834" />
+    <state width="1237" height="147" key="GridCell.Tab.0.right" timestamp="1649730268834">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="211" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1649261717424" />
-    <state x="450" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1649696354464">
+    <state width="1237" height="147" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1649730268834" />
+    <state x="522" y="63" key="RollbackChangesDialog" timestamp="1649730391743">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="450" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1649696354464" />
+    <state x="522" y="63" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1649730391743" />
+    <state x="233" y="62" key="Vcs.Push.Dialog.v2" timestamp="1649730088973">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="62" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1649730088973" />
+    <state x="450" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1649730339634">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="450" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1649730339634" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS206$Search.coverage" NAME="Search Coverage Results" MODIFIED="1649695776190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
