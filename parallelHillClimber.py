@@ -46,7 +46,7 @@ class PARALLEL_HILL_CLIMBER:
 
     def Select(self):
         for key in self.parents:
-            if self.parents[key].fitness > self.children[key].fitness:
+            if self.parents[key].fitness < self.children[key].fitness:
                 self.parents[key].fitness = self.children[key].fitness
 
     def Print(self):
@@ -55,13 +55,21 @@ class PARALLEL_HILL_CLIMBER:
 
 
     def Show_Best(self):
-        best = 5
+        best = -2
         for key in self.parents:
-            if self.parents[key].fitness < best:
+            if self.parents[key].fitness > best:
                 best_key = key
                 best = self.parents[key].fitness
         print(self.parents[best_key].fitness)
         self.parents[best_key].Start_Simulation("GUI")
+
+        f = open("../Final.txt", "w")
+        f.write(str(self.parents[best_key].fitness) + "\n")
+        for i in range(c.numSensorNeurons):
+            for j in range(c.numMotorNeurons):
+                f.write(str(self.parents[best_key].weights[i][j]) + "\n")
+        f.close()
+
 
     def Evaluate(self, solutions):
         for bot in range(c.populationSize):
