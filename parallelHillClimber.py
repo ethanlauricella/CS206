@@ -61,9 +61,12 @@ class PARALLEL_HILL_CLIMBER:
                 best_key = key
                 best = self.parents[key].fitness
         print(self.parents[best_key].fitness)
-        self.parents[best_key].Start_Simulation("GUI")
+        self.parents[best_key].Start_Simulation("DIRECT")
+        #self.parents[best_key].Start_Simulation("GUI")
 
-        f = open("../Final.txt", "w")
+
+        f = open("../Data/Final.txt", "w")
+
         f.write(str(self.parents[best_key].fitness) + "\n")
         for i in range(c.numSensorNeurons):
             for j in range(c.numMotorNeurons):

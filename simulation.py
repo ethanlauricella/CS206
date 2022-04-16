@@ -19,7 +19,7 @@ class SIMULATION:
         else:
             self.physicsClient = p.connect(p.GUI)
 
-        p.setGravity(0, 0, -50)
+        p.setGravity(0, 0, -30)
 
         self.world = WORLD()
         self.robot = ROBOT(self.solutionID)

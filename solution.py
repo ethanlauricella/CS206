@@ -14,12 +14,11 @@ class SOLUTION:
     def __init__(self, Id):
         self.myID = Id
         self.weights = np.zeros((c.numSensorNeurons, c.numMotorNeurons))
-        file_exists = exists("../Final.txt")
+        file_exists = exists("../data/Final.txt")
 
         if file_exists and self.myID == 0:
-            f = open("../Final.txt", "r")
+            f = open("../data/Final.txt", "r")
             fitness = f.readline()
-            print(fitness)
             for i in range(c.numSensorNeurons):
                 for j in range(c.numMotorNeurons):
                     self.weights[i][j] = float(f.readline())
@@ -37,7 +36,8 @@ class SOLUTION:
         self.Create_world()
         self.Create_body()
         self.Create_brain()
-        os.system("start /B C:/Users/Ethan/anaconda3/python.exe simulate.py " + directOrGui + " " + str(self.myID))
+        #os.system("start /B C:/Users/Ethan/anaconda3/python.exe simulate.py " + directOrGui + " " + str(self.myID))
+        os.system("python3 simulate.py " + directOrGui + " " + str(self.myID) + " &")
         pass
 
     def Wait_For_Simulation_To_End(self):
@@ -75,39 +75,39 @@ class SOLUTION:
         pyrosim.Send_Cube(name="Torso", pos=[0., 0., 2.], size=[1.7, 1.0, .5])
 
         pyrosim.Send_Joint(name="Torso_Leg1A", parent="Torso", child="Leg1A", type="revolute",
-                           position=[0.5, .5, 2.], jointAxis="1 1 0")
+                           position=[0.5, .6, 2.], jointAxis="1 1 0")
         pyrosim.Send_Cube(name="Leg1A", pos=[0., .0, -0.5], size=[0.3, .3, 1.])
 
         pyrosim.Send_Joint(name="Leg1A_Leg1B", parent="Leg1A", child="Leg1B", type="revolute",
-                           position=[0., 0., -1.], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="Leg1B", pos=[0., 0., -.5], size=[0.3, 0.3, 1.])
+                           position=[0., 0., -0.7], jointAxis="0 1 0")
+        pyrosim.Send_Cube(name="Leg1B", pos=[0., 0., -.5], size=[0.3, 0.3, .7])
 
 
         pyrosim.Send_Joint(name="Torso_Leg2A", parent="Torso", child="Leg2A", type="revolute",
-                           position=[-0.5, .5, 2.], jointAxis="1 1 0")
+                           position=[-0.5, .6, 2.], jointAxis="1 1 0")
         pyrosim.Send_Cube(name="Leg2A", pos=[0., 0., -0.5], size=[0.3, .3, 1.])
 
         pyrosim.Send_Joint(name="Leg2A_Leg2B", parent="Leg2A", child="Leg2B", type="revolute",
-                           position=[0., 0., -1.], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="Leg2B", pos=[0., 0., -.5], size=[0.3, 0.3, 1.])
+                           position=[0., 0., -0.7], jointAxis="0 1 0")
+        pyrosim.Send_Cube(name="Leg2B", pos=[0., 0., -.5], size=[0.3, 0.3, .7])
 
 
         pyrosim.Send_Joint(name="Torso_Leg3A", parent="Torso", child="Leg3A", type="revolute",
-                           position=[0.5, -.5, 2.], jointAxis="1 1 0")
+                           position=[0.5, -.6, 2.], jointAxis="1 1 0")
         pyrosim.Send_Cube(name="Leg3A", pos=[0., 0., -.5], size=[0.3, 0.3, 1.])
 
         pyrosim.Send_Joint(name="Leg3A_Leg3B", parent="Leg3A", child="Leg3B", type="revolute",
-                           position=[0., 0, -1.], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="Leg3B", pos=[0., 0., -.5], size=[0.3, 0.3, 1.])
+                           position=[0., 0, -0.7], jointAxis="0 1 0")
+        pyrosim.Send_Cube(name="Leg3B", pos=[0., 0., -.5], size=[0.3, 0.3, .7])
 
 
         pyrosim.Send_Joint(name="Torso_Leg4A", parent="Torso", child="Leg4A", type="revolute",
-                           position=[-0.5, -.5, 2.], jointAxis="1 1 0")
+                           position=[-0.5, -.6, 2.], jointAxis="1 1 0")
         pyrosim.Send_Cube(name="Leg4A", pos=[0., 0., -.5], size=[0.3, .3, 1.])
 
         pyrosim.Send_Joint(name="Leg4A_Leg4B", parent="Leg4A", child="Leg4B", type="revolute",
-                           position=[0., 0., -1.], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="Leg4B", pos=[0., 0., -.5], size=[0.3, 0.3, 1.])
+                           position=[0., 0., -0.7], jointAxis="0 1 0")
+        pyrosim.Send_Cube(name="Leg4B", pos=[0., 0., -.5], size=[0.3, 0.3, .7])
 
 
         pyrosim.Send_Joint(name="Torso_Rod1", parent="Torso", child="Rod1", type="revolute",
