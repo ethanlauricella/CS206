@@ -48,6 +48,7 @@ class SOLUTION:
 
         f = open("fitness" + str(self.myID) + ".txt", "r")
         self.fitness = float(f.readline())
+        t.sleep(0.01)
         f.close()
         os.remove("fitness" + str(self.myID) + ".txt")
 
@@ -74,31 +75,31 @@ class SOLUTION:
         pyrosim.Start_URDF("Body.urdf")
 
 
-        sim_height = 2. # height off the ground
+        sim_height = 1. # height off the ground
 
-        body_height = .55 # thickness in z direction
-        body_length = 2.4 # length in x direction
-        body_width = 1. # width in y direction
+        body_height = .55 / 2. # thickness in z direction
+        body_length = 1.2 # length in x direction
+        body_width = .5 # width in y direction
 
         pyrosim.Send_Cube(name="Torso", pos=[0., 0., sim_height], size=[body_length, body_width, body_height])
 
         # Parameters
 
-        leg_spreadX = body_length/4.0 + .1 # how far apart along the torso
-        leg_spreadY = .6 # how far from torso outwards
-        leg_height = sim_height + .3 # Height off ground from torso
+        leg_spreadX = body_length/4.0 + .1/2.0 # how far apart along the torso
+        leg_spreadY = .3 # how far from torso outwards
+        leg_height = sim_height + .3/2.0 # Height off ground from torso
 
-        leg_x = .25 # thickness of leg in x direction
-        leg_y = .23 # thickness of leg in y direction
+        leg_x = .25 /2.0 # thickness of leg in x direction
+        leg_y = .23 /2.0# thickness of leg in y direction
 
 
 
         for i in range(1,5):
-            pyrosim.Send_Cube(name="Leg"+str(i)+"A", pos=[-.3, .0, -.5], size=[leg_x, leg_y, 1], rpy=[0,1.57/2.0,.0])
-            pyrosim.Send_Cube(name="Leg"+str(i)+"B", pos=[0.2, 0., -.33], size=[leg_x - .05, leg_y -.01, 1], rpy=[0,-1.57/2.0,.0])
+            pyrosim.Send_Cube(name="Leg"+str(i)+"A", pos=[-.3/2.0, .0, -.5/2.0], size=[leg_x, leg_y, 1/2.0], rpy=[0,1.57/2.0,.0])
+            pyrosim.Send_Cube(name="Leg"+str(i)+"B", pos=[0.2/2.0, 0., -.33/2.0], size=[leg_x - .05/2.0, leg_y -.01/2.0, 1/2.0], rpy=[0,-1.57/2.0,.0])
 
             pyrosim.Send_Joint(name="Leg"+str(i)+"A_Leg"+str(i)+"B", parent="Leg"+str(i)+"A", child="Leg"+str(i)+"B", type="revolute",
-                               position=[-0.52, 0., -.92], jointAxis="0 1 0")
+                               position=[-0.52/2.0, 0., -.92/2.0], jointAxis="0 1 0")
 
         pyrosim.Send_Joint(name="Torso_Leg1A", parent="Torso", child="Leg1A", type="revolute",
                            position=[leg_spreadX, leg_spreadY, leg_height], jointAxis="0 1 0")
@@ -124,8 +125,8 @@ class SOLUTION:
         for i in range(1,5):
 
             pyrosim.Send_Joint(name="Leg"+str(i)+"B_Foot"+str(i)+"", parent="Leg"+str(i)+"B", child="Foot"+str(i)+"", type="fixed",
-                               position=[.55, 0., -.68], jointAxis="0 0 0")
-            pyrosim.Send_Sphere(name="Foot"+str(i)+"", pos=[.0, .0, .0], size=[.16])
+                               position=[.55/2.0, 0., -.68/2.0], jointAxis="0 0 0")
+            pyrosim.Send_Sphere(name="Foot"+str(i)+"", pos=[.0, .0, .0], size=[.16/2.0])
 
 
         pyrosim.End()
