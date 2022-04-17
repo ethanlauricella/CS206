@@ -4,39 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Finished Building Bot">
-      <change afterPath="$PROJECT_DIR$/Data/Leg1ASensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Leg1A_Leg1BMotor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Leg1BSensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Leg2ASensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Leg2A_Leg2BMotor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Leg2BSensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Leg3ASensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Leg3A_Leg3BMotor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Leg3BSensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Leg4ASensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Leg4A_Leg4BMotor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Leg4BSensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Rod1Sensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Rod1_Rod2Motor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Rod2Sensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/RodSensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/TorsoSensor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Torso_Leg1AMotor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Torso_Leg2AMotor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Torso_Leg3AMotor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Torso_Leg4AMotor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Torso_Rod1Motor.npy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Torso_RodMotor.npy" afterDir="false" />
+    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Finished OOP">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_12_15_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_12_15_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_4_11_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_4_11_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_2022_12_26_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_2022_12_26_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Body.urdf" beforeDir="false" afterPath="$PROJECT_DIR$/Body.urdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg1ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg1ASensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg1BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg1BSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg2ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg2ASensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg2BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg2BSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg3ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg3ASensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg3BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg3BSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg4ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg4ASensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg4BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg4BSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/TorsoSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/TorsoSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Final.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Final.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parallelHillClimber.py" beforeDir="false" afterPath="$PROJECT_DIR$/parallelHillClimber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyrosim/massurdf.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyrosim/massurdf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/sensor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/solution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,14 +51,14 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/simulation.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/simulate.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/robot.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/constants.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/CLionProjects/Speed-Test-elaurice-ebalasca/BubbleSort.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/world.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/parallelHillClimber.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/solution.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/simulation.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/parallelHillClimber.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/simulate.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/constants.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/world.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/CLionProjects/Speed-Test-elaurice-ebalasca/BubbleSort.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="InvalidFacetManager">
     <ignored-facets>
@@ -236,7 +219,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -472,12 +455,12 @@
                   </entry>
                 </map>
               </option>
-              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Starting work on simulation" />
@@ -505,30 +488,5 @@
     <MESSAGE value="Final Quad walker." />
     <MESSAGE value="Updated Code" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated Code" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="618" height="154" key="GridCell.Tab.0.bottom" timestamp="1650161003799">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="618" height="154" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1650161003799" />
-    <state width="618" height="154" key="GridCell.Tab.0.center" timestamp="1650161003799">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="618" height="154" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1650161003799" />
-    <state width="618" height="154" key="GridCell.Tab.0.left" timestamp="1650161003799">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="618" height="154" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1650161003799" />
-    <state width="618" height="154" key="GridCell.Tab.0.right" timestamp="1650161003799">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="618" height="154" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1650161003799" />
-    <state x="450" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1650157634536">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="450" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1650157634536" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CS206$Search.coverage" NAME="Search Coverage Results" MODIFIED="1650161003799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
