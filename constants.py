@@ -8,10 +8,10 @@ windows = 0
 linux = 1
 comp = 0
 
-numberOfGenerations = 2
-populationSize = 3
+numberOfGenerations = 40
+populationSize = 10
 
-motorJointRange = 1.
+motorJointRange = 1.5
 
 numSensorNeurons = 13
 numMotorNeurons = 8
