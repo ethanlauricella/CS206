@@ -31,4 +31,4 @@ class MOTOR:
             maxForce=750)
 
     def Save_Values(self):
-        np.save("data/" + str(self.jointName) + "Motor", self.motorValues)
+        np.save("Data/" + str(self.jointName) + "Motor", self.motorValues)

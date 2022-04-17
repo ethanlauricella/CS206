@@ -36,8 +36,8 @@ class SOLUTION:
         self.Create_world()
         self.Create_body()
         self.Create_brain()
-        #os.system("start /B C:/Users/Ethan/anaconda3/python.exe simulate.py " + directOrGui + " " + str(self.myID))
-        os.system("python3 simulate.py " + directOrGui + " " + str(self.myID) + " &")
+        os.system("start /B C:/Users/Ethan/anaconda3/python.exe simulate.py " + directOrGui + " " + str(self.myID))
+        #os.system("python3 simulate.py " + directOrGui + " " + str(self.myID) + " &")
         pass
 
     def Wait_For_Simulation_To_End(self):
@@ -91,11 +91,11 @@ class SOLUTION:
         leg_y = .23 # thickness of leg in y direction
 
         for i in range(1,5):
-            pyrosim.Send_Cube(name="Leg"+str(i)+"A", pos=[0., .0, -.5], size=[leg_x, leg_y, 1.1], rpy=[0,.5,0])
-            pyrosim.Send_Cube(name="Leg"+str(i)+"B", pos=[0., 0., -.5], size=[leg_x - .05, leg_y -.01, .8], rpy=[0,-.5,0])
+            pyrosim.Send_Cube(name="Leg"+str(i)+"A", pos=[0., .0, -.5], size=[leg_x, leg_y, 1.1], rpy=[0,0,0])
+            pyrosim.Send_Cube(name="Leg"+str(i)+"B", pos=[0.5, 0., .0], size=[leg_x - .05, leg_y -.01, .8], rpy=[0,1.57,0])
 
             pyrosim.Send_Joint(name="Leg"+str(i)+"A_Leg"+str(i)+"B", parent="Leg"+str(i)+"A", child="Leg"+str(i)+"B", type="revolute",
-                               position=[-.1, 0., -.7], jointAxis="0 1 0")
+                               position=[0., 0., -(sim_height)/2. + .1], jointAxis="0 1 0")
 
         pyrosim.Send_Joint(name="Torso_Leg1A", parent="Torso", child="Leg1A", type="revolute",
                            position=[leg_spreadX, leg_spreadY, leg_height], jointAxis="1 1 0")
@@ -121,8 +121,8 @@ class SOLUTION:
         for i in range(1,5):
 
             pyrosim.Send_Joint(name="Leg"+str(i)+"B_Foot"+str(i)+"", parent="Leg"+str(i)+"B", child="Foot"+str(i)+"", type="fixed",
-                               position=[0., 0., 0.], jointAxis="0 0 0")
-            pyrosim.Send_Sphere(name="Foot"+str(i)+"", pos=[.2, .0, -.9], size=[.2])
+                               position=[.95, 0., 0.], jointAxis="0 0 0")
+            pyrosim.Send_Sphere(name="Foot"+str(i)+"", pos=[.0, .0, .0], size=[.2])
 
 
         pyrosim.End()

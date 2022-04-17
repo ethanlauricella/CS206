@@ -2,7 +2,7 @@
     <link name="Torso">
         <inertial>
             <origin xyz="0.0 0.0 2.0" rpy="[0, 0, 0]"/>
-            <mass value="7" />
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
@@ -23,12 +23,12 @@
     </link>
     <link name="Leg1A">
         <inertial>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
             <geometry>
                 <box size="0.25 0.23 1.1" />
             </geometry>
@@ -37,7 +37,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
             <geometry>
                 <box size="0.25 0.23 1.1" />
             </geometry>
@@ -45,12 +45,12 @@
     </link>
     <link name="Leg1B">
         <inertial>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
             <geometry>
                 <box size="0.2 0.22 0.8" />
             </geometry>
@@ -59,7 +59,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
             <geometry>
                 <box size="0.2 0.22 0.8" />
             </geometry>
@@ -68,18 +68,18 @@
     <joint name="Leg1A_Leg1B" type="revolute">
        <parent link="Leg1A"/>
        <child  link="Leg1B"/>
-       <origin rpy="0 0 0" xyz="-0.1 0.0 -0.7" />
+       <origin rpy="0 0 0" xyz="0.0 0.0 -0.9" />
      <axis xyz="0 1 0"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
     <link name="Leg2A">
         <inertial>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
             <geometry>
                 <box size="0.25 0.23 1.1" />
             </geometry>
@@ -88,7 +88,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
             <geometry>
                 <box size="0.25 0.23 1.1" />
             </geometry>
@@ -96,12 +96,12 @@
     </link>
     <link name="Leg2B">
         <inertial>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
             <geometry>
                 <box size="0.2 0.22 0.8" />
             </geometry>
@@ -110,7 +110,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
             <geometry>
                 <box size="0.2 0.22 0.8" />
             </geometry>
@@ -119,18 +119,18 @@
     <joint name="Leg2A_Leg2B" type="revolute">
        <parent link="Leg2A"/>
        <child  link="Leg2B"/>
-       <origin rpy="0 0 0" xyz="-0.1 0.0 -0.7" />
+       <origin rpy="0 0 0" xyz="0.0 0.0 -0.9" />
      <axis xyz="0 1 0"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
     <link name="Leg3A">
         <inertial>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
             <geometry>
                 <box size="0.25 0.23 1.1" />
             </geometry>
@@ -139,7 +139,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
             <geometry>
                 <box size="0.25 0.23 1.1" />
             </geometry>
@@ -147,12 +147,12 @@
     </link>
     <link name="Leg3B">
         <inertial>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
             <geometry>
                 <box size="0.2 0.22 0.8" />
             </geometry>
@@ -161,7 +161,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
             <geometry>
                 <box size="0.2 0.22 0.8" />
             </geometry>
@@ -170,18 +170,18 @@
     <joint name="Leg3A_Leg3B" type="revolute">
        <parent link="Leg3A"/>
        <child  link="Leg3B"/>
-       <origin rpy="0 0 0" xyz="-0.1 0.0 -0.7" />
+       <origin rpy="0 0 0" xyz="0.0 0.0 -0.9" />
      <axis xyz="0 1 0"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
     <link name="Leg4A">
         <inertial>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
             <geometry>
                 <box size="0.25 0.23 1.1" />
             </geometry>
@@ -190,7 +190,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0.5, 0]"/>
+            <origin xyz="0.0 0.0 -0.5" rpy="[0, 0, 0]"/>
             <geometry>
                 <box size="0.25 0.23 1.1" />
             </geometry>
@@ -198,12 +198,12 @@
     </link>
     <link name="Leg4B">
         <inertial>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
             <geometry>
                 <box size="0.2 0.22 0.8" />
             </geometry>
@@ -212,7 +212,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0 0.0 -0.5" rpy="[0, -0.5, 0]"/>
+            <origin xyz="0.5 0.0 0.0" rpy="[0, 1.57, 0]"/>
             <geometry>
                 <box size="0.2 0.22 0.8" />
             </geometry>
@@ -221,7 +221,7 @@
     <joint name="Leg4A_Leg4B" type="revolute">
        <parent link="Leg4A"/>
        <child  link="Leg4B"/>
-       <origin rpy="0 0 0" xyz="-0.1 0.0 -0.7" />
+       <origin rpy="0 0 0" xyz="0.0 0.0 -0.9" />
      <axis xyz="0 1 0"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
@@ -256,18 +256,18 @@
     <joint name="Leg1B_Foot1" type="fixed">
        <parent link="Leg1B"/>
        <child  link="Foot1"/>
-       <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+       <origin rpy="0 0 0" xyz="0.95 0.0 0.0" />
      <axis xyz="0 0 0"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
     <link name="Foot1">
         <inertial>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
             <geometry>
                 <sphere radius="0.2" />
             </geometry>
@@ -276,7 +276,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
             <geometry>
                 <sphere radius="0.2" />
             </geometry>
@@ -285,18 +285,18 @@
     <joint name="Leg2B_Foot2" type="fixed">
        <parent link="Leg2B"/>
        <child  link="Foot2"/>
-       <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+       <origin rpy="0 0 0" xyz="0.95 0.0 0.0" />
      <axis xyz="0 0 0"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
     <link name="Foot2">
         <inertial>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
             <geometry>
                 <sphere radius="0.2" />
             </geometry>
@@ -305,7 +305,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
             <geometry>
                 <sphere radius="0.2" />
             </geometry>
@@ -314,18 +314,18 @@
     <joint name="Leg3B_Foot3" type="fixed">
        <parent link="Leg3B"/>
        <child  link="Foot3"/>
-       <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+       <origin rpy="0 0 0" xyz="0.95 0.0 0.0" />
      <axis xyz="0 0 0"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
     <link name="Foot3">
         <inertial>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
             <geometry>
                 <sphere radius="0.2" />
             </geometry>
@@ -334,7 +334,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
             <geometry>
                 <sphere radius="0.2" />
             </geometry>
@@ -343,18 +343,18 @@
     <joint name="Leg4B_Foot4" type="fixed">
        <parent link="Leg4B"/>
        <child  link="Foot4"/>
-       <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+       <origin rpy="0 0 0" xyz="0.95 0.0 0.0" />
      <axis xyz="0 0 0"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
     <link name="Foot4">
         <inertial>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
-            <mass value="7" />
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
+            <mass value="5" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
             <geometry>
                 <sphere radius="0.2" />
             </geometry>
@@ -363,7 +363,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.2 0.0 -0.9" rpy="[0, 0, 0]"/>
+            <origin xyz="0.0 0.0 0.0" rpy="[0, 0, 0]"/>
             <geometry>
                 <sphere radius="0.2" />
             </geometry>

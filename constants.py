@@ -3,10 +3,10 @@ import numpy as np
 
 
 
-numberOfGenerations = 2
+numberOfGenerations = 4
 populationSize = 1
 
-motorJointRange = 2.
+motorJointRange = 4.
 
 numSensorNeurons = 13
 numMotorNeurons = 8

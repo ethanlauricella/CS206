@@ -77,7 +77,7 @@ class PARALLEL_HILL_CLIMBER:
 
     def Evaluate(self, solutions):
         for bot in range(c.populationSize):
-            solutions[bot].Start_Simulation("GUI")
+            solutions[bot].Start_Simulation("DIRECT")
         for bot in range(c.populationSize):
             solutions[bot].Wait_For_Simulation_To_End()
 

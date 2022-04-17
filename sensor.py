@@ -21,7 +21,7 @@ class SENSOR:
         #if i == 999:
          #   print(self.values)
     def Save_Values(self):
-        np.save("data/"+str(self.linkName)+"Sensor", self.values)
+        np.save("Data/"+str(self.linkName)+"Sensor", self.values)
 
 
 
