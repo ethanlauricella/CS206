@@ -4,22 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Finished OOP">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_12_15_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_12_15_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_4_11_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_13_2022_4_11_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_2022_12_26_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_13_2022_12_26_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Updated Fitness Function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Body.urdf" beforeDir="false" afterPath="$PROJECT_DIR$/Body.urdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Leg1ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg1ASensor.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg1BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg1BSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Leg2ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg2ASensor.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg2BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg2BSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Leg3ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg3ASensor.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg3BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg3BSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Leg4ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg4ASensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Leg4BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg4BSensor.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/TorsoSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/TorsoSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Final.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Final.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyrosim/massurdf.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyrosim/massurdf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/solution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -422,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649730413849</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Updated Fitness Function">
+      <created>1650198954169</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1650198954169</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,6 +491,7 @@
     <MESSAGE value="Evolution works." />
     <MESSAGE value="Final Quad walker." />
     <MESSAGE value="Updated Code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Code" />
+    <MESSAGE value="Updated Fitness Function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Fitness Function" />
   </component>
 </project>

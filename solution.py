@@ -77,7 +77,7 @@ class SOLUTION:
 
         body_height = .5 # thickness in z direction
         body_length = 2.5 # length in x direction
-        body_width = 1. # width in 56
+        body_width = 1.1 # width in y direction
 
         pyrosim.Send_Cube(name="Torso", pos=[0., 0., sim_height], size=[body_length, body_width, body_height])
 
@@ -90,24 +90,26 @@ class SOLUTION:
         leg_x = .25 # thickness of leg in x direction
         leg_y = .23 # thickness of leg in y direction
 
+
+
         for i in range(1,5):
-            pyrosim.Send_Cube(name="Leg"+str(i)+"A", pos=[0., .0, -.5], size=[leg_x, leg_y, 1.1], rpy=[0,0,0])
-            pyrosim.Send_Cube(name="Leg"+str(i)+"B", pos=[0.5, 0., .0], size=[leg_x - .05, leg_y -.01, .8], rpy=[0,1.57,0])
+            pyrosim.Send_Cube(name="Leg"+str(i)+"A", pos=[-.3, .0, -.5], size=[leg_x, leg_y, 1.1], rpy=[0,1.57/2.0,0])
+            pyrosim.Send_Cube(name="Leg"+str(i)+"B", pos=[0.2, 0., -.33], size=[leg_x - .05, leg_y -.01, 1.1], rpy=[0,-1.57/2.0,0])
 
             pyrosim.Send_Joint(name="Leg"+str(i)+"A_Leg"+str(i)+"B", parent="Leg"+str(i)+"A", child="Leg"+str(i)+"B", type="revolute",
-                               position=[0., 0., -(sim_height)/2. + .1], jointAxis="0 1 0")
+                               position=[-0.52, 0., -.92], jointAxis="0 1 0")
 
         pyrosim.Send_Joint(name="Torso_Leg1A", parent="Torso", child="Leg1A", type="revolute",
-                           position=[leg_spreadX, leg_spreadY, leg_height], jointAxis="1 1 0")
+                           position=[leg_spreadX, leg_spreadY, leg_height], jointAxis="0 1 0")
 
         pyrosim.Send_Joint(name="Torso_Leg2A", parent="Torso", child="Leg2A", type="revolute",
-                           position=[-leg_spreadX, leg_spreadY, leg_height], jointAxis="1 1 0")
+                           position=[-leg_spreadX, leg_spreadY, leg_height], jointAxis="0 1 0")
 
         pyrosim.Send_Joint(name="Torso_Leg3A", parent="Torso", child="Leg3A", type="revolute",
-                           position=[leg_spreadX, -leg_spreadY, leg_height], jointAxis="1 1 0")
+                           position=[leg_spreadX, -leg_spreadY, leg_height], jointAxis="0 1 0")
 
         pyrosim.Send_Joint(name="Torso_Leg4A", parent="Torso", child="Leg4A", type="revolute",
-                           position=[-leg_spreadX, -leg_spreadY, leg_height], jointAxis="1 1 0")
+                           position=[-leg_spreadX, -leg_spreadY, leg_height], jointAxis="0 1 0")
 
         #pyrosim.Send_Joint(name="Torso_Rod1", parent="Torso", child="Rod1", type="revolute",
        #                    position=[.5, 0., 2.25], jointAxis="0 1 0")
@@ -121,8 +123,8 @@ class SOLUTION:
         for i in range(1,5):
 
             pyrosim.Send_Joint(name="Leg"+str(i)+"B_Foot"+str(i)+"", parent="Leg"+str(i)+"B", child="Foot"+str(i)+"", type="fixed",
-                               position=[.95, 0., 0.], jointAxis="0 0 0")
-            pyrosim.Send_Sphere(name="Foot"+str(i)+"", pos=[.0, .0, .0], size=[.2])
+                               position=[.55, 0., -.68], jointAxis="0 0 0")
+            pyrosim.Send_Sphere(name="Foot"+str(i)+"", pos=[.0, .0, .0], size=[.18])
 
 
         pyrosim.End()
