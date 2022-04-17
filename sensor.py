@@ -1,4 +1,4 @@
-
+import constants as c
 import pybullet as p
 import numpy as np
 import pyrosim.pyrosim as pyrosim
@@ -10,7 +10,7 @@ class SENSOR:
 
     def Prepare_To_Sense(self,linkName):
         self.linkName = linkName
-        values = np.zeros(1000)
+        values = np.zeros(c.iterations)
         self.values = values
 
 

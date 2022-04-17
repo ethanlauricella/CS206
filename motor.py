@@ -18,6 +18,7 @@ class MOTOR:
 
     def Set_Value(self, desiredAngle, robot):
         self.time += 1
+
         pyrosim.Set_Motor_For_Joint(
 
             bodyIndex=robot,

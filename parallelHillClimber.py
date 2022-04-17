@@ -50,8 +50,18 @@ class PARALLEL_HILL_CLIMBER:
                 self.parents[key].fitness = self.children[key].fitness
 
     def Print(self):
+        best = -2
         for key in self.parents:
             print("Parent Fitness " + str(self.parents[key].fitness) + " Child Fitness " + str(self.children[key].fitness))
+
+            if self.parents[key].fitness > best:
+                best_key = key
+                best = self.parents[key].fitness
+
+            f = open("FitnessGraph.txt", "a")
+            f.write(str(self.parents[best_key].fitness) + "\n")
+            f.close()
+
 
 
     def Show_Best(self):

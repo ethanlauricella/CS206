@@ -19,14 +19,14 @@ class SIMULATION:
         else:
             self.physicsClient = p.connect(p.GUI)
 
-        p.setGravity(0, 0, -30)
+        p.setGravity(0, 0, c.grav)
 
         self.world = WORLD()
         self.robot = ROBOT(self.solutionID)
 
     def Run(self):
         self.robot.Prepare_To_Act()
-        for i in range(1000):
+        for i in range(c.iterations):
 
             p.stepSimulation()
             self.robot.Sense(i)
@@ -34,7 +34,7 @@ class SIMULATION:
             self.robot.Act()
 
             if self.directOrGUI == "GUI":
-                t.sleep(1. / 100.)
+                t.sleep(1./10000)
 
     def Save_Sensor(self):
         self.robot.Save_Sensor()
