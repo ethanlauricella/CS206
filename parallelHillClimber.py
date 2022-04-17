@@ -61,11 +61,12 @@ class PARALLEL_HILL_CLIMBER:
                 best_key = key
                 best = self.parents[key].fitness
         print(self.parents[best_key].fitness)
-        self.parents[best_key].Start_Simulation("DIRECT")
-        #self.parents[best_key].Start_Simulation("GUI")
+        #self.parents[best_key].Start_Simulation("DIRECT")
+        self.parents[best_key].Start_Simulation("GUI")
 
 
-        f = open("../Data/Final.txt", "w")
+        #f = open("../Data/Final.txt", "w")
+        f = open("Final.txt", "w")
 
         f.write(str(self.parents[best_key].fitness) + "\n")
         for i in range(c.numSensorNeurons):
@@ -76,7 +77,7 @@ class PARALLEL_HILL_CLIMBER:
 
     def Evaluate(self, solutions):
         for bot in range(c.populationSize):
-            solutions[bot].Start_Simulation("DIRECT")
+            solutions[bot].Start_Simulation("GUI")
         for bot in range(c.populationSize):
             solutions[bot].Wait_For_Simulation_To_End()
 

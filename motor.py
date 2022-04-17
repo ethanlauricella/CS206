@@ -28,7 +28,7 @@ class MOTOR:
 
             targetPosition=desiredAngle * c.motorJointRange * np.sin(self.time * np.pi / 50),
 
-            maxForce=1000)
+            maxForce=750)
 
     def Save_Values(self):
         np.save("data/" + str(self.jointName) + "Motor", self.motorValues)

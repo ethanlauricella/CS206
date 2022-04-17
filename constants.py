@@ -3,13 +3,13 @@ import numpy as np
 
 
 
-numberOfGenerations = 3
-populationSize = 2
+numberOfGenerations = 2
+populationSize = 1
 
-motorJointRange = 5.
+motorJointRange = 2.
 
-numSensorNeurons = 11
-numMotorNeurons = 10
+numSensorNeurons = 13
+numMotorNeurons = 8
 
 # Generate.py, in Generate_Brain()
 sensors = np.arange(numSensorNeurons)
