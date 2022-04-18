@@ -9,25 +9,34 @@ import os
 import random as random
 from os.path import exists
 
+
 class SOLUTION:
 
     def __init__(self, Id):
         self.myID = Id
-        self.weights = np.zeros((c.numSensorNeurons, c.numMotorNeurons))
+        self.weights1 = np.zeros((c.numSensorNeurons, c.numHiddenNeurons))
+        self.weights2 = np.zeros((c.numHiddenNeurons, c.numMotorNeurons))
+
         file_exists = exists("../data/Final.txt")
 
-        if file_exists and self.myID == 0:
-            f = open("../data/Final.txt", "r")
-            fitness = f.readline()
-            for i in range(c.numSensorNeurons):
-                for j in range(c.numMotorNeurons):
-                    self.weights[i][j] = float(f.readline())
-            f.close()
-        else:
-            for i in range(c.numSensorNeurons):
-                for j in range(c.numMotorNeurons):
-                    self.weights[i][j] = np.random.rand() * 2 - 1
-            pass
+        #        if file_exists and self.myID == 0:
+        #            f = open("../data/Final.txt", "r")
+        #            fitness = f.readline()
+        #            for i in range(c.numSensorNeurons):
+        #                for j in range(c.numMotorNeurons):
+        #                    self.weights[i][j] = float(f.readline())
+        #            f.close()
+        #        else:
+
+        for sens in range(c.numSensorNeurons):
+            for hid in range(c.numHiddenNeurons):
+                self.weights1[sens][hid] = np.random.rand() * 2 - 1
+
+        for hid2 in range(c.numHiddenNeurons):
+            for mot in range(c.numMotorNeurons):
+                self.weights2[hid2][mot] = np.random.rand() * 2 - 1
+
+
 
     def Set_ID(self, Id):
         self.myID = Id
@@ -56,9 +65,14 @@ class SOLUTION:
         pass
 
     def Mutate(self):
-        randomRow = random.randint(0, c.numSensorNeurons - 1)
-        randomColumn = random.randint(0, c.numMotorNeurons - 1)
-        self.weights[randomRow, randomColumn] = random.random() * 2 - 1
+
+        randomRow1 = random.randint(0, c.numSensorNeurons - 1)
+        randomColumn1 = random.randint(0, c.numHiddenNeurons - 1)
+        self.weights1[randomRow1, randomColumn1] = random.random() * 2 - 1
+
+        randomRow2 = random.randint(0, c.numHiddenNeurons - 1)
+        randomColumn2 = random.randint(0, c.numMotorNeurons - 1)
+        self.weights2[randomRow2, randomColumn2] = random.random() * 2 - 1
 
     def Create_world(self):
         pyrosim.Start_SDF("World.sdf")
@@ -74,32 +88,32 @@ class SOLUTION:
 
         pyrosim.Start_URDF("Body.urdf")
 
+        sim_height = 1.  # height off the ground
 
-        sim_height = 1. # height off the ground
-
-        body_height = .55 / 2. # thickness in z direction
-        body_length = 1.2 # length in x direction
-        body_width = .5 # width in y direction
+        body_height = .55 / 2.  # thickness in z direction
+        body_length = 1.2  # length in x direction
+        body_width = .5  # width in y direction
 
         pyrosim.Send_Cube(name="Torso", pos=[0., 0., sim_height], size=[body_length, body_width, body_height])
 
         # Parameters
 
-        leg_spreadX = body_length/4.0 + .1/2.0 # how far apart along the torso
-        leg_spreadY = .3 # how far from torso outwards
-        leg_height = sim_height + .3/2.0 # Height off ground from torso
+        leg_spreadX = body_length / 4.0 + .1 / 2.0  # how far apart along the torso
+        leg_spreadY = .3  # how far from torso outwards
+        leg_height = sim_height + .3 / 2.0  # Height off ground from torso
 
-        leg_x = .25 /2.0 # thickness of leg in x direction
-        leg_y = .23 /2.0# thickness of leg in y direction
+        leg_x = .25 / 2.0  # thickness of leg in x direction
+        leg_y = .23 / 2.0  # thickness of leg in y direction
 
+        for i in range(1, 5):
+            pyrosim.Send_Cube(name="Leg" + str(i) + "A", pos=[-.3 / 2.0, .0, -.5 / 2.0], size=[leg_x, leg_y, 1 / 2.0],
+                              rpy=[0, 1.57 / 2.0, .0])
+            pyrosim.Send_Cube(name="Leg" + str(i) + "B", pos=[0.2 / 2.0, 0., -.33 / 2.0],
+                              size=[leg_x - .05 / 2.0, leg_y - .01 / 2.0, 1 / 2.0], rpy=[0, -1.57 / 2.0, .0])
 
-
-        for i in range(1,5):
-            pyrosim.Send_Cube(name="Leg"+str(i)+"A", pos=[-.3/2.0, .0, -.5/2.0], size=[leg_x, leg_y, 1/2.0], rpy=[0,1.57/2.0,.0])
-            pyrosim.Send_Cube(name="Leg"+str(i)+"B", pos=[0.2/2.0, 0., -.33/2.0], size=[leg_x - .05/2.0, leg_y -.01/2.0, 1/2.0], rpy=[0,-1.57/2.0,.0])
-
-            pyrosim.Send_Joint(name="Leg"+str(i)+"A_Leg"+str(i)+"B", parent="Leg"+str(i)+"A", child="Leg"+str(i)+"B", type="revolute",
-                               position=[-0.52/2.0, 0., -.92/2.0], jointAxis="0 1 0")
+            pyrosim.Send_Joint(name="Leg" + str(i) + "A_Leg" + str(i) + "B", parent="Leg" + str(i) + "A",
+                               child="Leg" + str(i) + "B", type="revolute",
+                               position=[-0.52 / 2.0, 0., -.92 / 2.0], jointAxis="0 1 0")
 
         pyrosim.Send_Joint(name="Torso_Leg1A", parent="Torso", child="Leg1A", type="revolute",
                            position=[leg_spreadX, leg_spreadY, leg_height], jointAxis="0 1 0")
@@ -113,21 +127,19 @@ class SOLUTION:
         pyrosim.Send_Joint(name="Torso_Leg4A", parent="Torso", child="Leg4A", type="revolute",
                            position=[-leg_spreadX, -leg_spreadY, leg_height], jointAxis="0 1 0")
 
-        #pyrosim.Send_Joint(name="Torso_Rod1", parent="Torso", child="Rod1", type="revolute",
-       #                    position=[.5, 0., 2.25], jointAxis="0 1 0")
-        #pyrosim.Send_Cube(name="Rod1", pos=[0., .0, 0.3], size=[0.3, .3, .6])
+        # pyrosim.Send_Joint(name="Torso_Rod1", parent="Torso", child="Rod1", type="revolute",
+        #                    position=[.5, 0., 2.25], jointAxis="0 1 0")
+        # pyrosim.Send_Cube(name="Rod1", pos=[0., .0, 0.3], size=[0.3, .3, .6])
 
-        #pyrosim.Send_Joint(name="Rod1_Rod2", parent="Rod1", child="Rod2", type="revolute",
+        # pyrosim.Send_Joint(name="Rod1_Rod2", parent="Rod1", child="Rod2", type="revolute",
         #                   position=[0.,0.,.6], jointAxis="0 1 0")
-        #pyrosim.Send_Cube(name="Rod2", pos=[0.3, .0, 0], size=[.6, .3, .3])
+        # pyrosim.Send_Cube(name="Rod2", pos=[0.3, .0, 0], size=[.6, .3, .3])
 
-
-        for i in range(1,5):
-
-            pyrosim.Send_Joint(name="Leg"+str(i)+"B_Foot"+str(i)+"", parent="Leg"+str(i)+"B", child="Foot"+str(i)+"", type="fixed",
-                               position=[.55/2.0, 0., -.68/2.0], jointAxis="0 0 0")
-            pyrosim.Send_Sphere(name="Foot"+str(i)+"", pos=[.0, .0, .0], size=[.16/2.0])
-
+        for i in range(1, 5):
+            pyrosim.Send_Joint(name="Leg" + str(i) + "B_Foot" + str(i) + "", parent="Leg" + str(i) + "B",
+                               child="Foot" + str(i) + "", type="fixed",
+                               position=[.55 / 2.0, 0., -.68 / 2.0], jointAxis="0 0 0")
+            pyrosim.Send_Sphere(name="Foot" + str(i) + "", pos=[.0, .0, .0], size=[.16 / 2.0])
 
         pyrosim.End()
 
@@ -135,9 +147,9 @@ class SOLUTION:
 
         pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
 
-        motorNum = c.numSensorNeurons + 1
         sensorNum = 0
-
+        hiddenNum = c.numSensorNeurons
+        motorNum = c.numSensorNeurons + c.numHiddenNeurons
 
         pyrosim.Send_Sensor_Neuron(name=sensorNum, linkName="Torso")
         sensorNum += 1
@@ -180,18 +192,29 @@ class SOLUTION:
         pyrosim.Send_Motor_Neuron(name=motorNum, jointName="Torso_Leg4A")
         motorNum += 1
 
-        #pyrosim.Send_Sensor_Neuron(name=9, linkName="Rod1")
-        #pyrosim.Send_Sensor_Neuron(name=10, linkName="Rod2")
-        #pyrosim.Send_Motor_Neuron(name=19, jointName="Torso_Rod1")
-        #pyrosim.Send_Motor_Neuron(name=20, jointName="Rod1_Rod2")
+        for j in range(c.numHiddenNeurons):
+            pyrosim.Send_Hidden_Neuron(name=hiddenNum)
+            hiddenNum += 1
 
-        for i in range(1,5):
-            pyrosim.Send_Sensor_Neuron(name=sensorNum, linkName="Foot"+str(i))
+        # pyrosim.Send_Sensor_Neuron(name=9, linkName="Rod1")
+        # pyrosim.Send_Sensor_Neuron(name=10, linkName="Rod2")
+        # pyrosim.Send_Motor_Neuron(name=19, jointName="Torso_Rod1")
+        # pyrosim.Send_Motor_Neuron(name=20, jointName="Rod1_Rod2")
+
+        for i in range(1, 5):
+            pyrosim.Send_Sensor_Neuron(name=sensorNum, linkName="Foot" + str(i))
             sensorNum += 1
 
         for currentRow in range(c.numSensorNeurons):
+            for hidden in range(c.numHiddenNeurons):
+                pyrosim.Send_Synapse(sourceNeuronName=currentRow, targetNeuronName=hidden + c.numSensorNeurons,
+                                     weight=self.weights1[currentRow][hidden])
+
+        for hidden2 in range(c.numHiddenNeurons):
             for currentColumn in range(c.numMotorNeurons):
-                pyrosim.Send_Synapse(sourceNeuronName=currentRow, targetNeuronName=currentColumn + c.numSensorNeurons,
-                                     weight=self.weights[currentRow][currentColumn])
+                pyrosim.Send_Synapse(sourceNeuronName=hidden2 + c.numSensorNeurons,
+                                     targetNeuronName=currentColumn + c.numSensorNeurons + c.numHiddenNeurons,
+                                     weight=self.weights2[hidden2][currentColumn])
 
         pyrosim.End()
+

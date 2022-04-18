@@ -80,8 +80,12 @@ class PARALLEL_HILL_CLIMBER:
 
         f.write(str(self.parents[best_key].fitness) + "\n")
         for i in range(c.numSensorNeurons):
-            for j in range(c.numMotorNeurons):
-                f.write(str(self.parents[best_key].weights[i][j]) + "\n")
+            for j in range(c.numHiddenNeurons):
+                f.write(str(self.parents[best_key].weights1[i][j]) + "\n")
+
+        for x in range(c.numHiddenNeurons):
+            for y in range(c.numMotorNeurons):
+                f.write(str(self.parents[best_key].weights2[x][y]) + "\n")
         f.close()
 
 

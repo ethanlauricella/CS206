@@ -8,13 +8,14 @@ windows = 0
 linux = 1
 comp = 0
 
-numberOfGenerations = 40
-populationSize = 10
+numberOfGenerations = 3
+populationSize = 2
 
 motorJointRange = 1.5
 
 numSensorNeurons = 13
 numMotorNeurons = 8
+numHiddenNeurons = 8
 
 force = 150
 # sin function CPP
