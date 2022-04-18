@@ -15,6 +15,7 @@ motorJointRange = 1.5
 
 numSensorNeurons = 13
 numMotorNeurons = 8
+numHiddenNeurons = 8
 
 
 force = 150
