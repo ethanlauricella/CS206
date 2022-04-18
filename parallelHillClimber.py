@@ -3,6 +3,7 @@ import constants as c
 import copy
 import os
 import glob, os
+import time as t
 
 
 class PARALLEL_HILL_CLIMBER:
@@ -51,16 +52,24 @@ class PARALLEL_HILL_CLIMBER:
 
     def Print(self):
         best = -2
+        total = 0
         for key in self.parents:
-            print("Parent Fitness " + str(self.parents[key].fitness) + " Child Fitness " + str(self.children[key].fitness))
+            print("Parent Fitness " + str(self.parents[key].fitness) + " Child Fitness " + str(
+                self.children[key].fitness))
 
-            if self.parents[key].fitness > best:
-                best_key = key
-                best = self.parents[key].fitness
+            #if self.parents[key].fitness > best:
+            #    best_key = key
+            #    best = self.parents[key].fitness
 
-            f = open("FitnessGraph.txt", "a")
-            f.write(str(self.parents[best_key].fitness) + "\n")
-            f.close()
+            # Add average value of bests parents
+            total += self.parents[key].fitness
+
+
+        f = open("FitnessGraph.txt", "a")
+        t.sleep(0.01)
+        f.write(str(total/ c.populationSize) + "\n")
+        t.sleep(0.01)
+        f.close()
 
 
 

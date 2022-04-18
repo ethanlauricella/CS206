@@ -8,7 +8,7 @@ windows = 0
 linux = 1
 comp = 0
 
-numberOfGenerations = 20
+numberOfGenerations = 40
 populationSize = 5
 
 motorJointRange = 1.5

@@ -47,7 +47,9 @@ class SOLUTION:
             t.sleep(0.01)
 
         f = open("fitness" + str(self.myID) + ".txt", "r")
+        t.sleep(0.01)
         self.fitness = float(f.readline())
+        t.sleep(0.01)
         f.close()
         os.remove("fitness" + str(self.myID) + ".txt")
 
