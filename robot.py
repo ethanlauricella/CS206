@@ -57,8 +57,8 @@ class ROBOT:
         zPosition = basePosition[2]
         f = open("fitness" + str(self.solutionID) + ".txt", "w")
 
-        #fit = zPosition / 2.0 + xPosition
-        fit = xPosition
+        fit = zPosition / 2.0 + xPosition
+        #fit = xPosition
 
         f.write(str(fit) + "\n")
         f.close()

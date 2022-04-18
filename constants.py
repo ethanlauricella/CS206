@@ -20,7 +20,7 @@ numHiddenNeurons = 8
 
 force = 150
 # sin function CPP
-freq = 250
+freq = 100
 
 # Generate.py, in Generate_Brain()
 sensors = np.arange(numSensorNeurons)
