@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Update Neurons">
+    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Optimal Robot walk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg1ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg1ASensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Leg2ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg2ASensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Leg2BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg2BSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Leg4BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg4BSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/TorsoSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/TorsoSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Final.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Final.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -467,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650294472499</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Optimal Robot walk">
+      <created>1650298024868</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1650298024868</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +514,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding in stepSimulation and sleep, iterating through time in the simulation" />
     <MESSAGE value="pyrosim added" />
     <MESSAGE value="Created box" />
     <MESSAGE value="Box won't move yet" />
@@ -533,6 +538,7 @@
     <MESSAGE value="Working final bot" />
     <MESSAGE value="Half of size of original bot" />
     <MESSAGE value="Update Neurons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Neurons" />
+    <MESSAGE value="Optimal Robot walk" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimal Robot walk" />
   </component>
 </project>
