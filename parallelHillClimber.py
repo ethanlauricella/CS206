@@ -1,8 +1,8 @@
 from solution import SOLUTION
 import constants as c
 import copy
-import os
 import glob, os
+import time as t
 
 
 class PARALLEL_HILL_CLIMBER:
@@ -47,22 +47,28 @@ class PARALLEL_HILL_CLIMBER:
     def Select(self):
         for key in self.parents:
             if self.parents[key].fitness < self.children[key].fitness:
-                self.parents[key].fitness = self.children[key].fitness
+                self.parents[key] = self.children[key]
 
     def Print(self):
         best = -2
+        total = 0
         for key in self.parents:
-            print("Parent Fitness " + str(self.parents[key].fitness) + " Child Fitness " + str(self.children[key].fitness))
+            print("Parent Fitness " + str(self.parents[key].fitness) + " Child Fitness " + str(
+                self.children[key].fitness))
 
-            if self.parents[key].fitness > best:
-                best_key = key
-                best = self.parents[key].fitness
+            #if self.parents[key].fitness > best:
+            #    best_key = key
+            #    best = self.parents[key].fitness
 
-            f = open("FitnessGraph.txt", "a")
-            f.write(str(self.parents[best_key].fitness) + "\n")
-            f.close()
+            # Add average value of bests parents
+            total += self.parents[key].fitness
 
 
+        f = open("FitnessGraph.txt", "a")
+        t.sleep(0.01)
+        f.write(str(total/ c.populationSize) + "\n")
+        t.sleep(0.01)
+        f.close()
 
     def Show_Best(self):
         best = -2
@@ -71,11 +77,10 @@ class PARALLEL_HILL_CLIMBER:
                 best_key = key
                 best = self.parents[key].fitness
         print(self.parents[best_key].fitness)
-        #self.parents[best_key].Start_Simulation("DIRECT")
+        # self.parents[best_key].Start_Simulation("DIRECT")
         self.parents[best_key].Start_Simulation("GUI")
 
-
-        #f = open("../Data/Final.txt", "w")
+        # f = open("../Data/Final.txt", "w")
         f = open("Final.txt", "w")
 
         f.write(str(self.parents[best_key].fitness) + "\n")
@@ -88,10 +93,8 @@ class PARALLEL_HILL_CLIMBER:
                 f.write(str(self.parents[best_key].weights2[x][y]) + "\n")
         f.close()
 
-
     def Evaluate(self, solutions):
         for bot in range(c.populationSize):
             solutions[bot].Start_Simulation("DIRECT")
         for bot in range(c.populationSize):
             solutions[bot].Wait_For_Simulation_To_End()
-

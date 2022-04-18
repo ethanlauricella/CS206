@@ -6,12 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Optimal Robot walk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg1ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg1ASensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Leg2ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg2ASensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Leg2BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg2BSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Leg4BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg4BSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/TorsoSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/TorsoSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Final.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Final.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parallelHillClimber.py" beforeDir="false" afterPath="$PROJECT_DIR$/parallelHillClimber.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/solution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +75,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/showBest.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myMinions" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">

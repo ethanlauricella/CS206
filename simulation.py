@@ -25,7 +25,6 @@ class SIMULATION:
         self.robot = ROBOT(self.solutionID)
 
     def Run(self):
-        self.robot.Prepare_To_Act()
         for i in range(c.iterations):
 
             p.stepSimulation()
@@ -34,7 +33,7 @@ class SIMULATION:
             self.robot.Act()
 
             if self.directOrGUI == "GUI":
-                t.sleep(1./10000)
+                t.sleep(1./480.)
 
     def Save_Sensor(self):
         self.robot.Save_Sensor()

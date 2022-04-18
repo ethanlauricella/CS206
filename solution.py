@@ -14,27 +14,8 @@ class SOLUTION:
 
     def __init__(self, Id):
         self.myID = Id
-        self.weights1 = np.zeros((c.numSensorNeurons, c.numHiddenNeurons))
-        self.weights2 = np.zeros((c.numHiddenNeurons, c.numMotorNeurons))
-
-        file_exists = exists("../data/Final.txt")
-
-        #        if file_exists and self.myID == 0:
-        #            f = open("../data/Final.txt", "r")
-        #            fitness = f.readline()
-        #            for i in range(c.numSensorNeurons):
-        #                for j in range(c.numMotorNeurons):
-        #                    self.weights[i][j] = float(f.readline())
-        #            f.close()
-        #        else:
-
-        for sens in range(c.numSensorNeurons):
-            for hid in range(c.numHiddenNeurons):
-                self.weights1[sens][hid] = np.random.rand() * 2 - 1
-
-        for hid2 in range(c.numHiddenNeurons):
-            for mot in range(c.numMotorNeurons):
-                self.weights2[hid2][mot] = np.random.rand() * 2 - 1
+        self.weights1 = np.random.rand(c.numSensorNeurons, c.numHiddenNeurons) * 2 - 1
+        self.weights2 = np.random.rand(c.numHiddenNeurons, c.numMotorNeurons) * 2 - 1
 
 
 
@@ -47,7 +28,7 @@ class SOLUTION:
         self.Create_brain()
 
         if c.comp == 0:
-            os.system("start /B C:/Users/Ethan/anaconda3/python.exe simulate.py " + directOrGui + " " + str(self.myID))
+            os.system("start /B python3 simulate.py " + directOrGui + " " + str(self.myID))
         else:
             os.system("python3 simulate.py " + directOrGui + " " + str(self.myID) + " &")
 
@@ -55,7 +36,6 @@ class SOLUTION:
         while not os.path.exists("fitness" + str(self.myID) + ".txt"):
             t.sleep(0.01)
 
-        t.sleep(0.01)
         f = open("fitness" + str(self.myID) + ".txt", "r")
         t.sleep(0.01)
         self.fitness = float(f.readline())
@@ -63,8 +43,6 @@ class SOLUTION:
         f.close()
         os.remove("fitness" + str(self.myID) + ".txt")
 
-    def Evaluate(self, directOrGui):
-        pass
 
     def Mutate(self):
 
@@ -78,16 +56,12 @@ class SOLUTION:
 
     def Create_world(self):
         pyrosim.Start_SDF("World.sdf")
-
-        # pyrosim.Send_Cube(name="Box", pos=[x, y, z], size=[length, width, height])
-
         pyrosim.End()
 
     def Set_Id(self, Id):
         self.Id = Id
 
     def Create_body(self):
-
         pyrosim.Start_URDF("Body.urdf")
 
         sim_height = 1.  # height off the ground
@@ -152,6 +126,10 @@ class SOLUTION:
         sensorNum = 0
         hiddenNum = c.numSensorNeurons
         motorNum = c.numSensorNeurons + c.numHiddenNeurons
+
+        #linkNames = ["Torso", "Leg1A", "Leg1B"]
+        #jointNames =
+
 
         pyrosim.Send_Sensor_Neuron(name=sensorNum, linkName="Torso")
         sensorNum += 1
