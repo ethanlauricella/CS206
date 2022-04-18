@@ -4,35 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Altered Constants">
+    <list default="true" id="b517a09f-d530-43d2-b743-a444194c83aa" name="Changes" comment="Half of size of original bot">
+      <change beforePath="$PROJECT_DIR$/.idea/CS206.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS206.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg1ASensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg1A_Leg1BMotor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg1BSensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg2ASensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg2A_Leg2BMotor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg2BSensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg3ASensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg3A_Leg3BMotor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg3BSensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg4ASensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg4A_Leg4BMotor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Leg4BSensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Rod1Sensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Rod1_Rod2Motor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Rod2Sensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/RodSensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/TorsoSensor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Torso_Leg1AMotor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Torso_Leg2AMotor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Torso_Leg3AMotor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Torso_Leg4AMotor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Torso_Rod1Motor.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Torso_RodMotor.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg1ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg1ASensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg2ASensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg2ASensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg2BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg2BSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Leg4BSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Leg4BSensor.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/TorsoSensor.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Data/TorsoSensor.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Final.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Final.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parallelHillClimber.py" beforeDir="false" afterPath="$PROJECT_DIR$/parallelHillClimber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyrosim/pyrosim.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyrosim/pyrosim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/showBest.py" beforeDir="false" afterPath="$PROJECT_DIR$/showBest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/solution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,14 +48,14 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/robot.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/solution.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/simulation.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/parallelHillClimber.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/simulate.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/robot.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/constants.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/world.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/CLionProjects/Speed-Test-elaurice-ebalasca/BubbleSort.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/parallelHillClimber.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/world.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/solution.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="InvalidFacetManager">
     <ignored-facets>
@@ -92,7 +75,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/CLionProjects/Robots" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/showBest.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -174,6 +157,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Showing Best" type="PythonConfigurationType" factoryName="Python">
+      <module name="CS206" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\ethan\PycharmProjects\CS_021\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/showBest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="generate" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -223,6 +228,7 @@
       <item itemvalue="Python.generate" />
       <item itemvalue="Python.simulate" />
       <item itemvalue="Python.Search" />
+      <item itemvalue="Python.Showing Best" />
       <item itemvalue="Python.BubbleSort" />
     </list>
     <recent_temporary>
@@ -233,7 +239,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -253,7 +259,7 @@
       <workItem from="1649732738693" duration="2567000" />
       <workItem from="1649736540848" duration="12197000" />
       <workItem from="1650157624930" duration="3301000" />
-      <workItem from="1650207044872" duration="11519000" />
+      <workItem from="1650207044872" duration="16950000" />
     </task>
     <task id="LOCAL-00001" summary="Starting work on simulation">
       <created>1642552610195</created>
@@ -451,21 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650215279405</updated>
     </task>
-    <task id="LOCAL-00029" summary="Altered Fitness">
-      <created>1650236094867</created>
+    <task id="LOCAL-00029" summary="Half of size of original bot">
+      <created>1650231130491</created>
       <option name="number" value="00029" />
       <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
-      <updated>1650236094867</updated>
+      <updated>1650231130491</updated>
     </task>
-    <task id="LOCAL-00030" summary="Altered Constants">
-      <created>1650236261329</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1650236261329</updated>
-    </task>
-    <option name="localTasksCounter" value="31" />
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,14 +497,15 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Actually set up pybullet, code working with simulation window" />
     <MESSAGE value="Adding in stepSimulation and sleep, iterating through time in the simulation" />
     <MESSAGE value="pyrosim added" />
     <MESSAGE value="Created box" />
@@ -529,8 +529,53 @@
     <MESSAGE value="Updated Code" />
     <MESSAGE value="Updated Fitness Function" />
     <MESSAGE value="Working final bot" />
-    <MESSAGE value="Altered Fitness" />
-    <MESSAGE value="Altered Constants" />
-    <option name="LAST_COMMIT_MESSAGE" value="Altered Constants" />
+    <MESSAGE value="Half of size of original bot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Half of size of original bot" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650238321666">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1650238321666" />
+    <state x="293" y="0" key="CommitChangelistDialog2" timestamp="1650231129698">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="293" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1650231129698" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1650238319028">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1650238319028" />
+    <state width="1237" height="188" key="GridCell.Tab.0.bottom" timestamp="1650241057216">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="188" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1650241057216" />
+    <state width="1237" height="188" key="GridCell.Tab.0.center" timestamp="1650241057216">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="188" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1650241057216" />
+    <state width="1237" height="188" key="GridCell.Tab.0.left" timestamp="1650241057216">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="188" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1650241057216" />
+    <state width="1237" height="188" key="GridCell.Tab.0.right" timestamp="1650241057216">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="188" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1650241057216" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1650236466813">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1650236466813" />
+    <state x="233" y="62" key="Vcs.Push.Dialog.v2" timestamp="1650231132966">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="62" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1650231132966" />
+    <state x="450" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1650236496729">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="450" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1650236496729" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CS206$Showing_Best.coverage" NAME="Showing Best Coverage Results" MODIFIED="1650240538758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS206$Search.coverage" NAME="Search Coverage Results" MODIFIED="1650241057216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

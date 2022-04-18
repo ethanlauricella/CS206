@@ -55,7 +55,9 @@ class SOLUTION:
         while not os.path.exists("fitness" + str(self.myID) + ".txt"):
             t.sleep(0.01)
 
+        t.sleep(0.01)
         f = open("fitness" + str(self.myID) + ".txt", "r")
+        t.sleep(0.01)
         self.fitness = float(f.readline())
         t.sleep(0.01)
         f.close()
