@@ -17,6 +17,22 @@ class SOLUTION:
         self.weights1 = np.random.rand(c.numSensorNeurons, c.numHiddenNeurons) * 2 - 1
         self.weights2 = np.random.rand(c.numHiddenNeurons, c.numMotorNeurons) * 2 - 1
 
+        if exists("Final.txt"):
+
+            f = open("Final.txt", "r")
+
+            fitness = f.readline()
+
+            for i in range(c.numSensorNeurons):
+                for j in range(c.numHiddenNeurons):
+                    self.weights1[i][j] = f.readline()
+
+            for x in range(c.numHiddenNeurons):
+                for y in range(c.numMotorNeurons):
+                    self.weights2[x][y] = f.readline()
+
+            f.close()
+
 
 
     def Set_ID(self, Id):

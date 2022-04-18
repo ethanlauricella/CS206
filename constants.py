@@ -2,16 +2,16 @@ import math as math
 import numpy as np
 
 iterations = 1000
-grav = -20.0
+grav = -20
 
 windows = 0
 linux = 1
 comp = 0
 
-numberOfGenerations = 20
-populationSize = 5
+numberOfGenerations = 10
+populationSize = 6
 
-motorJointRange = 1.5
+motorJointRange = 1.3
 
 numSensorNeurons = 13
 numMotorNeurons = 8

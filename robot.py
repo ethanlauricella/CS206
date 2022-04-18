@@ -2,6 +2,7 @@ import pybullet as p
 import pyrosim.pyrosim as pyrosim
 from pyrosim.neuralNetwork import NEURAL_NETWORK
 import os
+import time as t
 
 from sensor import SENSOR
 from motor import MOTOR
@@ -12,7 +13,9 @@ class ROBOT:
         self.solutionID = solutionID
         self.sensors = {}
         self.motors = {}
+        t.sleep(0.01)
         self.robotId = p.loadURDF("Body.urdf")
+        t.sleep(0.01)
         pyrosim.Prepare_To_Simulate(self.robotId)
         ROBOT.Prepare_To_Sense(self)
         ROBOT.Prepare_To_Act(self)
