@@ -33,7 +33,7 @@ class SIMULATION:
             self.robot.Act()
 
             if self.directOrGUI == "GUI":
-                t.sleep(1./480.)
+                t.sleep(0.01)
 
     def Save_Sensor(self):
         self.robot.Save_Sensor()

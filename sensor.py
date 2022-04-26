@@ -14,12 +14,9 @@ class SENSOR:
         self.values = values
 
 
-
     def Get_Value(self,i):
         self.values[i] = pyrosim.Get_Touch_Sensor_Value_For_Link(self.linkName)
 
-        #if i == 999:
-         #   print(self.values)
     def Save_Values(self):
         np.save("Data/"+str(self.linkName)+"Sensor", self.values)
 

@@ -1,7 +1,7 @@
 import math as math
 import numpy as np
 
-iterations = 1000
+iterations = 2000
 grav = -20
 
 windows = 0
@@ -21,5 +21,10 @@ numHiddenNeurons = 8
 force = 150
 # sin function CPP
 freq = 100
+
+
+# Name of file to read into
+
+file = "FinalPronking.txt"
 
 

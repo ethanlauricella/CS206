@@ -17,9 +17,9 @@ class SOLUTION:
         self.weights1 = np.random.rand(c.numSensorNeurons, c.numHiddenNeurons) * 2 - 1
         self.weights2 = np.random.rand(c.numHiddenNeurons, c.numMotorNeurons) * 2 - 1
 
-        if exists("Final.txt"):
+        if exists(c.file):
 
-            f = open("Final.txt", "r")
+            f = open(c.file, "r")
 
             fitness = f.readline()
 
